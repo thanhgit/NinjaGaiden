@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Engine\Sprite">
+      <UniqueIdentifier>{665bddb6-3fe7-4f6a-896c-8f847e86afb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Keyboard">
+      <UniqueIdentifier>{b6920ca0-6711-4443-8068-053c70d0c901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Sound">
+      <UniqueIdentifier>{d305dbcb-1d10-44af-8d83-304f4eaebeb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lib">
+      <UniqueIdentifier>{3cbee6c1-c208-4e7d-a4ec-6ef181eadf9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Background">
+      <UniqueIdentifier>{32d02142-04c6-4c5b-a953-7cc5c1baaddc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{a9eeab3f-e750-4210-b90d-8a0b7415fa95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{2b3fed7d-5d99-424a-8f0f-dc0fc76a76fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Collision">
+      <UniqueIdentifier>{9fadacdc-d6f2-4688-8789-a88425eb0fcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Box">
+      <UniqueIdentifier>{6555d5c5-a568-421f-99e2-c21072eda6b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{e8c404a3-853c-4880-8e7a-ac4553b78573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Object">
+      <UniqueIdentifier>{0e08b90f-a76f-4a5c-ad42-8a98b89b1640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Map">
+      <UniqueIdentifier>{5f1587a2-f392-4593-8d67-0243e7941e2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Scene1">
+      <UniqueIdentifier>{95b4f370-fff0-44bb-8cb8-dc1315b72668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Log">
+      <UniqueIdentifier>{69d99f12-778d-4521-b754-7d53bb56c17e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static">
+      <UniqueIdentifier>{61b57353-839a-40ea-b041-76afe4bcdba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\splash">
+      <UniqueIdentifier>{70269f17-999e-4d19-aa60-60c5a2770930}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Text">
+      <UniqueIdentifier>{9a646404-b4a9-488a-be83-8d89839b5b3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Items">
+      <UniqueIdentifier>{59604661-455a-47bb-a47a-7093962ac8d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Rec">
+      <UniqueIdentifier>{18a23ed7-ddfe-4894-a84c-612ac744bca3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Weapon">
+      <UniqueIdentifier>{053831a4-0ade-4ce0-81c3-49586cb86c2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy">
+      <UniqueIdentifier>{d8adb20a-0c3c-45ca-b253-0c2f8c521b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Boss">
+      <UniqueIdentifier>{a1dbada8-3449-4b9b-9d0a-9f667c75657a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interaction">
+      <UniqueIdentifier>{e141c48f-4f5d-4be5-8ed4-2d2c97d9151a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interaction\Map">
+      <UniqueIdentifier>{86ab8cfc-b664-40d5-a3d9-4351785083b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Others">
+      <UniqueIdentifier>{1fd34c11-0c4a-4de6-91bb-e7bcf000b2cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Others\Hurt">
+      <UniqueIdentifier>{c11da20d-f6e1-4dd7-b56a-20e74fa4867d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja">
+      <UniqueIdentifier>{23991bca-3213-48aa-afba-9874947a15c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\graphics">
+      <UniqueIdentifier>{76299e0c-ea50-4d3d-826b-7a6016a5e08d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\state">
+      <UniqueIdentifier>{41a25433-2b2e-402a-97a2-d465c4b9896a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\state\Actack">
+      <UniqueIdentifier>{cb4abbd1-41c7-4b32-ab9c-334631f559c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\state\Run">
+      <UniqueIdentifier>{59ecd54c-1e20-48f4-af5f-5187d372273c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\state\Actack\Stand">
+      <UniqueIdentifier>{28be351a-6f96-45ca-8521-fe350ad7d21e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\state\Stand">
+      <UniqueIdentifier>{26c80093-26df-4225-a7c7-07bbf2d789a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\state\Jump">
+      <UniqueIdentifier>{d8603419-24ad-421c-b973-189c63f05d3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\state\Jump\Vertical">
+      <UniqueIdentifier>{7f16c107-67eb-4a65-95e7-2a9d85894fac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\state\Jump\Parabol">
+      <UniqueIdentifier>{98c3a89a-c168-41a7-9cd2-b01a9ed0e077}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWindows.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Engine\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Engine\Keyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="dxaudio.cpp">
+      <Filter>Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio.cpp">
+      <Filter>Engine\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>Engine\Background</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMath.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Engine\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>Engine\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Engine\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene1.cpp">
+      <Filter>Scene\Scene1</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Engine\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashScene.cpp">
+      <Filter>Scene\splash</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Engine\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Rec.cpp">
+      <Filter>Object\Static\Rec</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Interaction.cpp">
+      <Filter>Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectWithMap.cpp">
+      <Filter>Interaction\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="PhisicalInteraction.cpp">
+      <Filter>Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Object\Static\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Static.cpp">
+      <Filter>Object\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="Hurt.cpp">
+      <Filter>Object\Others\Hurt</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>Object\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaState.cpp">
+      <Filter>Object\Ninja</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaGraphics.cpp">
+      <Filter>Object\Ninja\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaActackLeft.cpp">
+      <Filter>Object\Ninja\state\Actack\Stand</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaActackRight.cpp">
+      <Filter>Object\Ninja\state\Actack\Stand</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaRunLeft.cpp">
+      <Filter>Object\Ninja\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaRunRight.cpp">
+      <Filter>Object\Ninja\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaStandLeft.cpp">
+      <Filter>Object\Ninja\state\Stand</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaStandRight.cpp">
+      <Filter>Object\Ninja\state\Stand</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaControl.cpp">
+      <Filter>Object\Ninja</Filter>
+    </ClCompile>
+    <ClCompile Include="Ninja.cpp">
+      <Filter>Object\Ninja</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpVerticalRight.cpp">
+      <Filter>Object\Ninja\state\Jump\Vertical</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpParabolLeft.cpp">
+      <Filter>Object\Ninja\state\Jump\Parabol</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpParabolRight.cpp">
+      <Filter>Object\Ninja\state\Jump\Parabol</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpVerticalLeft.cpp">
+      <Filter>Object\Ninja\state\Jump\Vertical</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWindows.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Engine\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Engine\Keyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio.h">
+      <Filter>Engine\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>Engine\Background</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>Engine\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>Engine\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Engine\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene1.h">
+      <Filter>Scene\Scene1</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Engine\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashScene.h">
+      <Filter>Scene\splash</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Engine\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Rec.h">
+      <Filter>Object\Static\Rec</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Interaction.h">
+      <Filter>Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectWithMap.h">
+      <Filter>Interaction\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicalInteraction.h">
+      <Filter>Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Object\Static\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Static.h">
+      <Filter>Object\Static</Filter>
+    </ClInclude>
+    <ClInclude Include="Hurt.h">
+      <Filter>Object\Others\Hurt</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>Object\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaState.h">
+      <Filter>Object\Ninja</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaGraphics.h">
+      <Filter>Object\Ninja\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaActackLeft.h">
+      <Filter>Object\Ninja\state\Actack\Stand</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaActackRight.h">
+      <Filter>Object\Ninja\state\Actack\Stand</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaRunLeft.h">
+      <Filter>Object\Ninja\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaRunRight.h">
+      <Filter>Object\Ninja\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaStandLeft.h">
+      <Filter>Object\Ninja\state\Stand</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaStandRight.h">
+      <Filter>Object\Ninja\state\Stand</Filter>
+    </ClInclude>
+    <ClInclude Include="Ninja.h">
+      <Filter>Object\Ninja</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaControl.h">
+      <Filter>Object\Ninja</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpVerticalLeft.h">
+      <Filter>Object\Ninja\state\Jump\Vertical</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpVerticalRight.h">
+      <Filter>Object\Ninja\state\Jump\Vertical</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpParabolLeft.h">
+      <Filter>Object\Ninja\state\Jump\Parabol</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpParabolRight.h">
+      <Filter>Object\Ninja\state\Jump\Parabol</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="dxaudio.h">
+      <Filter>Lib</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+0 176 544 32 rec rec
+576 160 32 32 rec rec
+640 160 32 32 rec rec
+704 160 32 32 rec rec
+768 160 32 32 rec rec
+800 128 32 32 rec rec
+832 96 128 32 rec rec

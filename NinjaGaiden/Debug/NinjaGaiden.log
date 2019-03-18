@@ -1,0 +1,19 @@
+﻿  Scene1.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\scene1.h(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\scene1.h(8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\gamescene.h(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Ninja.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(169): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(178): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(274): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(284): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(309): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(320): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(343): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(347): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(348): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  NinjaGaiden.vcxproj -> C:\Users\Administrator\Desktop\NinjaGaiden\Debug\NinjaGaiden.exe
+  NinjaGaiden.vcxproj -> C:\Users\Administrator\Desktop\NinjaGaiden\Debug\NinjaGaiden.pdb (Full PDB)

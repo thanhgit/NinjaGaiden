@@ -1,0 +1,33 @@
+#include"Weapon.h"
+
+Weapon::Weapon(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, int _nWidth, int _nHeight, float _fVelocityX, float _fVelocityY) :Object(_fX, _fY, _nWidth, _nHeight, _fVelocityX, _fVelocityY)
+{
+	this->camera = camera;
+	this->delta = 0;
+}
+
+Weapon::~Weapon()
+{
+}
+
+void Weapon::Update()
+{
+}
+
+void Weapon::Dead()
+{
+}
+
+
+
+void Weapon::SetKeyboard(Keyboard * _keyboard)
+{
+	this->keyboard = _keyboard;
+}
+
+
+
+void Weapon::setDelta(DWORD _delta)
+{
+	this->delta = _delta;
+}
