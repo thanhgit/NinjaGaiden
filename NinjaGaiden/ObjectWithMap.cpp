@@ -18,6 +18,7 @@ void ObjectWithMap::NinjaInteractMap()
 	for (rec = this->recs.begin(); rec != this->recs.end(); rec++) {
 		collisionNinja->collision(*rec);
 		if (collisionNinja->GetDirection() == DOWN) {
+
 			float time = collisionNinja->GetCollisonTime();
 			int y = this->ninja->GetBody()->GetY() + time*this->ninja->GetBody()->GetVelocityY()+5;
 			this->ninja->normal();

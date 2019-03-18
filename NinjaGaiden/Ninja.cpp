@@ -29,6 +29,7 @@ Ninja::Ninja(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, 
 	this->control = new NinjaControl(this->graphics, new NinjaStandRight(this->graphics), this->GetBody());
 
 	this->isRun = true;
+	this->allowJump = false;
 
 	x_save = 0;
 	x_save = 0;
@@ -48,7 +49,7 @@ void Ninja::Update(DWORD _dt)
 	UpdateCamera();
 
 	if (this->keyboard->KeyDown(DIK_LEFT) && !IsJump()) {
-		if (this->keyboard->KeyDown(DIK_L)) {
+		if (this->keyboard->KeyDown(DIK_L) && this->allowJump) {
 			ActionJumpParabolLeft(_dt);
 		}
 		else {
@@ -56,7 +57,7 @@ void Ninja::Update(DWORD _dt)
 		}
 	}
 	else if (this->keyboard->KeyDown(DIK_RIGHT) && !IsJump()) {
-		if (this->keyboard->KeyDown(DIK_L)) {
+		if (this->keyboard->KeyDown(DIK_L) && this->allowJump) {
 			ActionJumpParabolRight(_dt);
 		}
 		else {
@@ -126,6 +127,7 @@ void Ninja::SetKeyboard(Keyboard * _keyboard)
 
 void Ninja::normal()
 {
+	this->allowJump = true;
 	if (IsJump()) {
 		if (IsLeft()) {
 			ActionStandLeft();
@@ -306,8 +308,10 @@ bool Ninja::IsJumpParabolRight()
 
 void Ninja::ActionJumpParabolLeft(DWORD _dt)
 {
+	this->allowJump = false;
+
 	float x = this->control->indexJumpParabol;
-	float y = -((x - 3)*(x - 5)*(x - 5));
+	float y = -((x - 3)*(x - 5)*(x - 5)) - 5;
 
 	this->body->SetY(this->body->GetY() + y);
 	this->body->SetX(this->body->GetX() + this->body->GetVelocityX()*(_dt+15));
@@ -317,8 +321,10 @@ void Ninja::ActionJumpParabolLeft(DWORD _dt)
 
 void Ninja::ActionJumpParabolRight(DWORD _dt)
 {
+	this->allowJump = false;
+
 	float x = this->control->indexJumpParabol;
-	float y = -((x - 3)*(x - 5)*(x - 5));
+	float y = -((x - 3)*(x - 5)*(x - 5)) - 5;
 
 	this->body->SetY(this->body->GetY() + y);
 	this->body->SetX(this->body->GetX() + this->body->GetVelocityX()*(_dt+15));

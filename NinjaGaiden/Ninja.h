@@ -112,6 +112,15 @@ public:
 		}
 	}
 
+	// allow jump
+	void SetAllowJump(bool _allowJump) {
+		this->allowJump = _allowJump;
+	}
+
+	bool GetAllowJump() {
+		return this->allowJump;
+	}
+
 public:
 	///////// simon 
 	int m_heart;
@@ -125,6 +134,7 @@ public:
 	Log* log;
 
 	bool isRun;
+	bool allowJump;
 
 	NinjaControl* control;
 	NinjaGraphics* graphics;
