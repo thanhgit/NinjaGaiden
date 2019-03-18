@@ -307,7 +307,7 @@ bool Ninja::IsJumpParabolRight()
 void Ninja::ActionJumpParabolLeft(DWORD _dt)
 {
 	float x = this->control->indexJumpParabol;
-	float y = -((x - 3)*(x - 4)*(x - 4)) + 3;
+	float y = -((x - 3)*(x - 5)*(x - 5));
 
 	this->body->SetY(this->body->GetY() + y);
 	this->body->SetX(this->body->GetX() + this->body->GetVelocityX()*(_dt+15));
@@ -318,7 +318,7 @@ void Ninja::ActionJumpParabolLeft(DWORD _dt)
 void Ninja::ActionJumpParabolRight(DWORD _dt)
 {
 	float x = this->control->indexJumpParabol;
-	float y = -((x - 3)*(x - 4)*(x - 4)) + 3;
+	float y = -((x - 3)*(x - 5)*(x - 5));
 
 	this->body->SetY(this->body->GetY() + y);
 	this->body->SetX(this->body->GetX() + this->body->GetVelocityX()*(_dt+15));
