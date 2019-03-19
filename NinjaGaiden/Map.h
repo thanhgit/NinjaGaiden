@@ -24,10 +24,10 @@ public:
 	Map(LPDIRECT3DDEVICE9 _d3ddv, Camera * camera, LPWSTR _spriteSheet, LPWSTR _spriteSheet2, char * _fileName);
 	void Update(DWORD delta);
 	void Draw(float vpx, float vpy);
-	void ReadMap(char * _filename);
-	void ReadRecs(char * _filename);
-	void ReadStatics(char * _filename);
-	void ReadEnemies(char * _fileName);
+	virtual void ReadMap(char * _filename)=0;
+	virtual void ReadRecs(char * _filename)=0;
+	virtual void ReadStatics(char * _filename)=0;
+	virtual void ReadEnemies(char * _fileName)=0;
 
 	list<Box*> GetRecs() {
 		return this->recs;
@@ -44,7 +44,7 @@ public:
 	list<Item*> GetItems() {
 		return this->items;
 	}
-private:
+protected:
 	int nTileCount;
 	int nTileTotal;
 	int nTileWidth;

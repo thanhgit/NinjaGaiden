@@ -100,14 +100,8 @@
     <Filter Include="Object\Ninja\state">
       <UniqueIdentifier>{41a25433-2b2e-402a-97a2-d465c4b9896a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Object\Ninja\state\Actack">
-      <UniqueIdentifier>{cb4abbd1-41c7-4b32-ab9c-334631f559c4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Object\Ninja\state\Run">
       <UniqueIdentifier>{59ecd54c-1e20-48f4-af5f-5187d372273c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Ninja\state\Actack\Stand">
-      <UniqueIdentifier>{28be351a-6f96-45ca-8521-fe350ad7d21e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Object\Ninja\state\Stand">
       <UniqueIdentifier>{26c80093-26df-4225-a7c7-07bbf2d789a2}</UniqueIdentifier>
@@ -120,6 +114,42 @@
     </Filter>
     <Filter Include="Object\Ninja\state\Jump\Parabol">
       <UniqueIdentifier>{98c3a89a-c168-41a7-9cd2-b01a9ed0e077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\SwordMan">
+      <UniqueIdentifier>{f8641c63-187a-40e5-94bd-48ec060a9141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\SwordMan\graphics">
+      <UniqueIdentifier>{7c070f0d-d419-4730-92eb-818369eda295}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\SwordMan\state">
+      <UniqueIdentifier>{f783da20-2225-460e-90c6-27a4d7af2e7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\SwordMan\state\Run">
+      <UniqueIdentifier>{b9338777-b6d6-4d5c-a1ef-f485e66cdb76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\SwordMan\state\Attack">
+      <UniqueIdentifier>{b04f9a30-a4b4-4f0c-94b7-dd6836a4dece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\state\Attack">
+      <UniqueIdentifier>{cb4abbd1-41c7-4b32-ab9c-334631f559c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ninja\state\Attack\Stand">
+      <UniqueIdentifier>{28be351a-6f96-45ca-8521-fe350ad7d21e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Map\Map1">
+      <UniqueIdentifier>{3052a867-66d2-4d35-8c4c-3e179d95687e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Map\Map2">
+      <UniqueIdentifier>{ce0be549-84dd-4a9a-a0ab-0be26131f4ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Map\Map3">
+      <UniqueIdentifier>{5c3fa915-c2da-49c1-8eea-b1c1ab45d42e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Scene2">
+      <UniqueIdentifier>{68fd13ec-fcad-4289-9230-dfb3fde63a9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Scene3">
+      <UniqueIdentifier>{2fb2e3e2-2a75-4420-810c-de327492e16a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -222,12 +252,6 @@
     <ClCompile Include="NinjaGraphics.cpp">
       <Filter>Object\Ninja\graphics</Filter>
     </ClCompile>
-    <ClCompile Include="NinjaActackLeft.cpp">
-      <Filter>Object\Ninja\state\Actack\Stand</Filter>
-    </ClCompile>
-    <ClCompile Include="NinjaActackRight.cpp">
-      <Filter>Object\Ninja\state\Actack\Stand</Filter>
-    </ClCompile>
     <ClCompile Include="NinjaRunLeft.cpp">
       <Filter>Object\Ninja\state\Run</Filter>
     </ClCompile>
@@ -257,6 +281,51 @@
     </ClCompile>
     <ClCompile Include="JumpVerticalLeft.cpp">
       <Filter>Object\Ninja\state\Jump\Vertical</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordManState.cpp">
+      <Filter>Object\Enemy\SwordMan</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordManControl.cpp">
+      <Filter>Object\Enemy\SwordMan</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordMan.cpp">
+      <Filter>Object\Enemy\SwordMan</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordManGraphics.cpp">
+      <Filter>Object\Enemy\SwordMan\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordManAttackLeft.cpp">
+      <Filter>Object\Enemy\SwordMan\state\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordManAttackRight.cpp">
+      <Filter>Object\Enemy\SwordMan\state\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordManRunLeft.cpp">
+      <Filter>Object\Enemy\SwordMan\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="SwordManRunRight.cpp">
+      <Filter>Object\Enemy\SwordMan\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaAttackRight.cpp">
+      <Filter>Object\Ninja\state\Attack\Stand</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaAttackLeft.cpp">
+      <Filter>Object\Ninja\state\Attack\Stand</Filter>
+    </ClCompile>
+    <ClCompile Include="Map1.cpp">
+      <Filter>Engine\Map\Map1</Filter>
+    </ClCompile>
+    <ClCompile Include="Map2.cpp">
+      <Filter>Engine\Map\Map2</Filter>
+    </ClCompile>
+    <ClCompile Include="Map3.cpp">
+      <Filter>Engine\Map\Map3</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene3.cpp">
+      <Filter>Scene\Scene3</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene2.cpp">
+      <Filter>Scene\Scene2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -353,12 +422,6 @@
     <ClInclude Include="NinjaGraphics.h">
       <Filter>Object\Ninja\graphics</Filter>
     </ClInclude>
-    <ClInclude Include="NinjaActackLeft.h">
-      <Filter>Object\Ninja\state\Actack\Stand</Filter>
-    </ClInclude>
-    <ClInclude Include="NinjaActackRight.h">
-      <Filter>Object\Ninja\state\Actack\Stand</Filter>
-    </ClInclude>
     <ClInclude Include="NinjaRunLeft.h">
       <Filter>Object\Ninja\state\Run</Filter>
     </ClInclude>
@@ -388,6 +451,51 @@
     </ClInclude>
     <ClInclude Include="JumpParabolRight.h">
       <Filter>Object\Ninja\state\Jump\Parabol</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordMan.h">
+      <Filter>Object\Enemy\SwordMan</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordManControl.h">
+      <Filter>Object\Enemy\SwordMan</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordManState.h">
+      <Filter>Object\Enemy\SwordMan</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordManGraphics.h">
+      <Filter>Object\Enemy\SwordMan\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordManRunLeft.h">
+      <Filter>Object\Enemy\SwordMan\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordManRunRight.h">
+      <Filter>Object\Enemy\SwordMan\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordManAttackLeft.h">
+      <Filter>Object\Enemy\SwordMan\state\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="SwordManAttackRight.h">
+      <Filter>Object\Enemy\SwordMan\state\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaAttackRight.h">
+      <Filter>Object\Ninja\state\Attack\Stand</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaAttackLeft.h">
+      <Filter>Object\Ninja\state\Attack\Stand</Filter>
+    </ClInclude>
+    <ClInclude Include="Map1.h">
+      <Filter>Engine\Map\Map1</Filter>
+    </ClInclude>
+    <ClInclude Include="Map2.h">
+      <Filter>Engine\Map\Map2</Filter>
+    </ClInclude>
+    <ClInclude Include="Map3.h">
+      <Filter>Engine\Map\Map3</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene2.h">
+      <Filter>Scene\Scene2</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene3.h">
+      <Filter>Scene\Scene3</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,13 @@
+0 176 256 32 rec rec
+256 144 160 32 rec rec
+416 112 160 32 rec rec
+576 80 160 32 rec rec
+800 176 32 32 rec rec
+864 144 32 64 rec rec
+928 112 32 96 rec rec
+960 176 128 32 rec rec
+1104 80 80 80 rec rec
+1152 176 96 16 rec rec
+1280 144 64 16 rec rec
+1376 176 64 16 rec rec
+1216 80 96 32 rec rec

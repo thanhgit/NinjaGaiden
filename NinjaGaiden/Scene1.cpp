@@ -1,6 +1,7 @@
 #include"Scene1.h"
 #include"Static.h"
 #include"Item.h"
+#include"Map1.h"
 #define CAMERA_VELOCYTY_X 5
 #define CAMERA_VELOCYTY_Y 5
 
@@ -15,14 +16,14 @@ Scene1::~Scene1()
 }
 void Scene1::init()
 {
-	this->GetCamera()->SetCamera(0, 208+16);
+	this->GetCamera()->SetCamera(0, 224);
 	this->GetCamera()->SetSize(256, 208);
 
-	map = new Map(GetDevice(),GetCamera(),NULL,NULL,NULL);
+	map = new Map1(GetDevice(),GetCamera(),NULL,NULL,NULL);
 	this->recs = map->GetRecs();
 
 	// player
-	this->ninja = new Ninja(GetDevice(), GetCamera(), 350, 100, 16, 32, 0, 0);
+	this->ninja = new Ninja(GetDevice(), GetCamera(), 30, 200, 16, 32, 0, 0);
 	this->ninja->SetKeyboard(this->GetKeyboard());
 	this->SetPlayer(this->ninja);
 

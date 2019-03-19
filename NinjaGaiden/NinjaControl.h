@@ -12,6 +12,7 @@ public:
 	~NinjaControl();
 	void changeState(NinjaState* ninjaState, Box* ninja);
 	NinjaState* getState();
+	bool SameType(NinjaState* _state);
 
 	// run
 	int indexRun;
@@ -24,7 +25,7 @@ public:
 	int indexJumpParabol;
 
 private:
-	bool SameType(NinjaState* _state);
+	
 	NinjaState* state;
 	Box* ninja;
 
@@ -32,4 +33,4 @@ private:
 	
 };
 
-#endif // !SIMON_CONTROL_H
+#endif

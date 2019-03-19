@@ -13,7 +13,6 @@ SplashScene::~SplashScene()
 }
 void SplashScene::InitScene()
 {
-	map = new Map(GetDevice(), GetCamera(), NULL, NULL, NULL);
 	this->GetCamera()->SetCamera(0, 432);
 
 	log->ShowLog("Khoi tao man hinh");

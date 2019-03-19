@@ -1,13 +1,13 @@
-﻿  Ninja.cpp
+﻿  Map3.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(171): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(180): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(276): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(286): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(313): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(326): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(349): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(353): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\ninja.cpp(354): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\map3.cpp(89): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\map3.cpp(91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\map3.cpp(185): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Map2.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\map2.cpp(89): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\map2.cpp(91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\map2.cpp(185): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
   NinjaGaiden.vcxproj -> C:\Users\Administrator\Desktop\NinjaGaiden\Debug\NinjaGaiden.exe
   NinjaGaiden.vcxproj -> C:\Users\Administrator\Desktop\NinjaGaiden\Debug\NinjaGaiden.pdb (Full PDB)

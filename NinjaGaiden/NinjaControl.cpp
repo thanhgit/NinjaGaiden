@@ -5,8 +5,8 @@
 #include"NinjaRunLeft.h"
 #include"NinjaRunRight.h"
 // stand actack
-#include"NinjaActackLeft.h"
-#include"NinjaActackRight.h"
+#include"NinjaAttackLeft.h"
+#include"NinjaAttackRight.h"
 
 // jump
 #include"JumpVerticalLeft.h"
@@ -41,8 +41,13 @@ void NinjaControl::changeState(NinjaState * _state, Box* _ninja)
 	this->state = _state;
 	
 	if (SameType(new NinjaStandLeft()) || SameType(new NinjaStandRight())) {
+		this->indexJumpVertical = 0;
+		this->indexJumpParabol = 0;
 	} 
 	else if (SameType(new NinjaRunLeft()) || SameType(new NinjaRunRight())) {
+		this->indexJumpVertical = 0;
+		this->indexJumpParabol = 0;
+
 		if (this->indexRun > 3) {
 			this->indexRun = 0;
 			if (SameType(new NinjaRunLeft())) {
@@ -57,14 +62,14 @@ void NinjaControl::changeState(NinjaState * _state, Box* _ninja)
 			Sleep(50);
 		}
 	}
-	else if (SameType(new NinjaActackLeft()) || SameType(new NinjaActackRight())) {
+	else if (SameType(new NinjaAttackLeft()) || SameType(new NinjaAttackRight())) {
 		this->indexJumpVertical = 0;
 		this->indexJumpParabol = 0;
 
 		if (this->indexActack > 3) {
 			this->indexActack = 0;
 			Sleep(200);
-			if (SameType(new NinjaActackLeft())) {
+			if (SameType(new NinjaAttackLeft())) {
 				this->state = new NinjaStandLeft(this->graphics);
 			}
 			else {

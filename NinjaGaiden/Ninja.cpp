@@ -5,8 +5,8 @@
 #include"NinjaRunRight.h"
 
 // stand actack
-#include"NinjaActackLeft.h"
-#include"NinjaActackRight.h"
+#include"NinjaAttackLeft.h"
+#include"NinjaAttackRight.h"
 
 // jump
 #include"JumpVerticalLeft.h"
@@ -64,12 +64,15 @@ void Ninja::Update(DWORD _dt)
 			ActionRunRight(_dt);
 		}
 	}
+	else if (this->keyboard->KeyDown(DIK_1)) {
+		this->body->SetY(200);
+	}
 	else if (this->keyboard->KeyDown(DIK_K) && !IsActack()) {
 		if (IsLeft()) {
-			this->control->changeState(new NinjaActackLeft(this->graphics), this->GetBody());
+			this->control->changeState(new NinjaAttackLeft(this->graphics), this->GetBody());
 		}
 		else if (IsRight()) {
-			this->control->changeState(new NinjaActackRight(this->graphics), this->GetBody());
+			this->control->changeState(new NinjaAttackRight(this->graphics), this->GetBody());
 		}
 	}
 	else if (this->keyboard->KeyDown(DIK_L) && !IsJump()) {
@@ -83,10 +86,10 @@ void Ninja::Update(DWORD _dt)
 	else {
 		if (IsActack()) {
 			if (IsActackLeft()) {
-				this->control->changeState(new NinjaActackLeft(this->graphics), this->GetBody());
+				this->control->changeState(new NinjaAttackLeft(this->graphics), this->GetBody());
 			}
 			else if (IsActackRight()) {
-				this->control->changeState(new NinjaActackRight(this->graphics), this->GetBody());
+				this->control->changeState(new NinjaAttackRight(this->graphics), this->GetBody());
 			}
 		}
 		else if (IsJump()) {
@@ -238,12 +241,12 @@ bool Ninja::IsRun()
 
 bool Ninja::IsActackLeft()
 {
-	return (typeid(*this->control->getState()) == typeid(NinjaActackLeft));
+	return (typeid(*this->control->getState()) == typeid(NinjaAttackLeft));
 }
 
 bool Ninja::IsActackRight()
 {
-	return (typeid(*this->control->getState()) == typeid(NinjaActackRight));
+	return (typeid(*this->control->getState()) == typeid(NinjaAttackRight));
 }
 
 bool Ninja::IsActack()

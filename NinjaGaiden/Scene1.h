@@ -31,4 +31,4 @@ private:
 	Log* log;
 	DWORD deltaTime;
 };
-#endif // !SCENE1_H
+#endif

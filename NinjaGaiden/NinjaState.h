@@ -11,4 +11,4 @@ public:
 
 };
 
-#endif // !SIMON_STATE_H
+#endif
