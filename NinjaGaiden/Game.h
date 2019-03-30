@@ -9,7 +9,7 @@
 #include"Background.h"
 #include"Camera.h"
 #include"Map.h"
-#include"Scene.h"
+#include"SceneManager.h"
 #include<list>
 
 class Game :public MyWindows
@@ -17,17 +17,17 @@ class Game :public MyWindows
 public:
 	Game(HINSTANCE _hInstace, LPTSTR _lpName, int _nCmdShow, int _nWidthScreen, int _nHeightScreen, int _nRate);
 	~Game();
-	void UpdateSprite(DWORD delta);
-	void UpdateInput();
 	void InitInput();
 	void InitSprite();
-	void ProcessInput();
 	void InitSound();
-	void UpdateSound();
-private:
 
-	Scene* scene;
+	void UpdateSprite(DWORD delta);
+	void UpdateInput();
+	void UpdateSound();
+
+	void ProcessInput();
+private:
 };
 
 
-#endif // !GAME_H
+#endif

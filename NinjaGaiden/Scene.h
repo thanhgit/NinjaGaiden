@@ -18,7 +18,7 @@ public:
 	Camera* GetCamera();
 	Keyboard* GetKeyboard();
 	Audio* GetAudio();
-private:
+protected:
 	LPDIRECT3DDEVICE9 d3ddv;
 	Camera* camera;
 	Keyboard* keyboard;

@@ -1,8 +1,8 @@
 #include"GameScene.h"
-// weapon
-
-
-
+#include"SceneManager.h"
+#include"Scene1.h"
+#include"Scene2.h"
+#include"Scene3.h"
 
 GameScene::GameScene(LPDIRECT3DDEVICE9 _lpD3dDv, Camera* _camera, HWND _hWnd) :Scene(_lpD3dDv, _camera, _hWnd)
 {
@@ -79,19 +79,19 @@ void GameScene::UpdateScene(DWORD delta)
 void GameScene::ProcessInput()
 {
 	if (GetKeyboard()->KeyDown(DIK_1)) {
-		this->ninja->revival();
+		Scene* scene = new Scene1(GetDevice(), GetCamera(), this->hWnd);
+		scene->InitScene();
+		SceneManager::Instance()->add(scene);
 	}
 	else if (GetKeyboard()->KeyDown(DIK_2)) {
-		this->ninja->save();
+		Scene* scene = new Scene2(GetDevice(), GetCamera(), this->hWnd);
+		scene->InitScene();
+		SceneManager::Instance()->add(scene);
 	}
 	else if (GetKeyboard()->KeyDown(DIK_3)) {
-		this->ninja->restore();
-	}
-	else if (GetKeyboard()->KeyDown(DIK_4)) {
-		this->ninja->GetBody()->SetVelocityX(0);
-		this->ninja->GetBody()->SetVelocityY(0);
-		this->ninja->GetBody()->SetX(3200);
-		this->ninja->GetBody()->SetY(300);
+		Scene* scene = new Scene3(GetDevice(), GetCamera(), this->hWnd);
+		scene->InitScene();
+		SceneManager::Instance()->add(scene);
 	}
 
 	this->processInput();

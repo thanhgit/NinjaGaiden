@@ -287,7 +287,7 @@ void Ninja::ActionJumpVerticalLeft(DWORD _dt)
 void Ninja::ActionJumpVerticalRight(DWORD _dt)
 {
 	float x = this->control->indexJumpVertical;
-	float y = -((x - 3)*(x - 4)*(x - 4)) + 2;
+	float y = -((x - 3)*(x - 5)*(x - 5)) - 5;
 
 	this->body->SetY(this->body->GetY() + y);
 	this->control->changeState(new JumpVerticalRight(this->graphics), this->GetBody());

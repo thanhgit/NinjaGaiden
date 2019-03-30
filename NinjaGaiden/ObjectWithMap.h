@@ -3,6 +3,7 @@
 #include"Interaction.h"
 #include"Object.h"
 #include"Box.h"
+#include"Enemy.h"
 #include"Ninja.h"
 
 #include<list>
@@ -14,17 +15,18 @@ public:
 	void SetRecs(std::list<Box*> _recs) {
 		this->recs = _recs;
 	}
-	void SetObjs(std::list<Object*> _objs) {
-		this->objs = _objs;
+	void SetEnemies(std::list<Enemy*> _enemies) {
+		this->enemies = _enemies;
 	}
 
 	void NinjaInteractMap();
+	void EnemiesInteractMap();
 
 	void interact();
 private:
 	Ninja* ninja;
 	std::list<Box*> recs;
-	std::list<Object*> objs;
+	std::list<Enemy*> enemies;
 };
 
 

@@ -32,6 +32,7 @@ protected:
 		this->enemy = _enemy;
 	}
 
+
 	Item* weapon;
 
 	Ninja* ninja;

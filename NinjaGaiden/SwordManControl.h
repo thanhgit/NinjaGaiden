@@ -20,10 +20,6 @@ public:
 	// actack
 	int indexActack;
 
-	// jump
-	int indexJumpVertical;
-	int indexJumpParabol;
-
 private:
 	SwordManState* state;
 	Box* swordMan;

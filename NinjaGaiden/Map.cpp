@@ -35,7 +35,7 @@ void Map::Update(DWORD delta)
 	for (int row = 0; row < Utils::VIEWPORT_HEIGHT_COL; row++) {
 		for (int col = 0; col < Utils::VIEWPORT_WIDTH_COL; col++) {
 
-			int index = this->arr[row + startrow][col + startcol];
+			int index = this->arr[(row + startrow) < 0 ? 0 : (row + startrow) ][col + startcol];
 			this->imgmap->SetIndex(index);
 			this->map[row*Utils::VIEWPORT_WIDTH_COL+col] = this->imgmap;
 
@@ -45,14 +45,14 @@ void Map::Update(DWORD delta)
 		}
 	}
 
-	std::list<Static*>::iterator it;
+	/*std::list<Static*>::iterator it;
 	for (it = this->statics.begin(); it != this->statics.end(); ++it) {
 		(*it)->Update();
 	}
 
 	std::list<Enemy*>::iterator enemy;
 	for (enemy = this->enemies.begin(); enemy != this->enemies.end(); ++enemy) {
-		(*enemy)->Update();
+		(*enemy)->Update(0);
 	}
 
 	std::list<Object*>::iterator rec;
@@ -63,7 +63,7 @@ void Map::Update(DWORD delta)
 	std::list<Item*>::iterator item;
 	for (item = this->items.begin(); item != this->items.end(); ++item) {
 		(*item)->Update();
-	}
+	}*/
 }
 
 void Map::Draw(float vpx, float vpy)

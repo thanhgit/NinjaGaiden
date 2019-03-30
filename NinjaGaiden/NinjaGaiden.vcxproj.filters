@@ -151,6 +151,9 @@
     <Filter Include="Scene\Scene3">
       <UniqueIdentifier>{2fb2e3e2-2a75-4420-810c-de327492e16a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene\SceneManager">
+      <UniqueIdentifier>{12199c64-6762-4fc8-8dfb-7ae8569ff93c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -327,6 +330,9 @@
     <ClCompile Include="Scene2.cpp">
       <Filter>Scene\Scene2</Filter>
     </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Scene\SceneManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -496,6 +502,9 @@
     </ClInclude>
     <ClInclude Include="Scene3.h">
       <Filter>Scene\Scene3</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Scene\SceneManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

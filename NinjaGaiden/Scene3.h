@@ -1,5 +1,5 @@
-#ifndef SCENE1_H
-#define SCENE1_H
+#ifndef SCENE3_H
+#define SCENE3_H
 #include"Scene.h"
 #include"Map.h"
 #include"Log.h""
@@ -14,6 +14,7 @@
 class Scene3 :public GameScene
 {
 public:
+	Scene3();
 	Scene3(LPDIRECT3DDEVICE9 _lpD3dDv, Camera * _camera, HWND _hWnd);
 	~Scene3();
 	void init();

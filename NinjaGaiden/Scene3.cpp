@@ -5,6 +5,10 @@
 #define CAMERA_VELOCYTY_X 5
 #define CAMERA_VELOCYTY_Y 5
 
+Scene3::Scene3() : GameScene(NULL, NULL, NULL)
+{
+}
+
 Scene3::Scene3(LPDIRECT3DDEVICE9 _lpD3dDv, Camera* _camera, HWND _hWnd) :GameScene(_lpD3dDv, _camera, _hWnd)
 {
 	log = new Log();

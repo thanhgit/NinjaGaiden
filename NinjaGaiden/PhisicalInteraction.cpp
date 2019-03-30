@@ -3,7 +3,7 @@
 PhysicalInteraction::PhysicalInteraction(Ninja * _ninja)
 {
 	this->ninja = _ninja;
-	this->objWithMap = new ObjectWithMap(this->ninja);
+	this->ninjaWithMap = new ObjectWithMap(this->ninja);
 }
 
 PhysicalInteraction::~PhysicalInteraction()
@@ -12,10 +12,12 @@ PhysicalInteraction::~PhysicalInteraction()
 
 void PhysicalInteraction::update()
 {
-	this->objWithMap->interact();
+	this->ninjaWithMap->interact();
 }
 
 void PhysicalInteraction::SetEnemies(std::list<Enemy*> _enemies)
 {
+	this->enemies = _enemies;
+	this->ninjaWithMap->SetEnemies(_enemies);
 }
 

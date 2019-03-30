@@ -39,4 +39,4 @@ private:
 };
 
 
-#endif // !MYDIRECTX_H
+#endif

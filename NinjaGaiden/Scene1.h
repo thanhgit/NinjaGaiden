@@ -8,12 +8,14 @@
 #include"Ninja.h""
 
 #include"GameScene.h"
+#include"SwordMan.h"
 
 #include"PhysicalInteraction.h"
 #include<list>
 class Scene1:public GameScene
 {
 public:
+	Scene1();
 	Scene1(LPDIRECT3DDEVICE9 _lpD3dDv, Camera * _camera, HWND _hWnd);
 	~Scene1();
 	void init();
@@ -26,6 +28,7 @@ private:
 	list<Box*> recs;
 
 	Ninja * ninja;
+	std::list<Enemy*> enemies;
 
 	Map* map;
 	Log* log;

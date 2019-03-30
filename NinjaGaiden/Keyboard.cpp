@@ -19,6 +19,7 @@ Keyboard::~Keyboard()
 void Keyboard::InputKeyboard(HWND _hWnd) {
 	this->hWnd = _hWnd;
 	this->isAcquire = true;
+
 	if (DirectInput8Create(
 		GetModuleHandle(NULL),
 		DIRECTINPUT_VERSION,
@@ -95,6 +96,8 @@ void Keyboard::RunKeyboard() {
 		this->lpDIdv8->GetDeviceData(sizeof(DIDEVICEOBJECTDATA), keyEvent, &dwElements, 0);
 	}
 	else {
-		this->lpDIdv8->Unacquire();
+		if (this->lpDIdv8 != nullptr) {
+			this->lpDIdv8->Unacquire();
+		}
 	}
 }

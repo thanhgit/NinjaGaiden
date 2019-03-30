@@ -5,6 +5,10 @@
 #define CAMERA_VELOCYTY_X 5
 #define CAMERA_VELOCYTY_Y 5
 
+Scene1::Scene1() : GameScene(NULL, NULL, NULL)
+{
+}
+
 Scene1::Scene1(LPDIRECT3DDEVICE9 _lpD3dDv,Camera* _camera,HWND _hWnd):GameScene(_lpD3dDv,_camera,_hWnd)
 {
 	log = new Log();
@@ -27,19 +31,33 @@ void Scene1::init()
 	this->ninja->SetKeyboard(this->GetKeyboard());
 	this->SetPlayer(this->ninja);
 
+	// sword man
+	SwordMan* swordMan;
+	swordMan = new SwordMan(GetDevice(), GetCamera(), 100, 200, 16, 32, 0, 0);
+
+	enemies = this->map->GetEnemies();
+	enemies.push_back(swordMan);
+
 	this->physics = new PhysicalInteraction(this->ninja);
+	this->physics->SetEnemies(enemies);
+
 	list<Object*> listObj;
 	physics->SetRecs(this->recs);
 
 	stage = 1;
 }
 
-void Scene1::update(DWORD delta)
+void Scene1::update(DWORD _dt)
 {
-	map->Update(delta);
+	map->Update(_dt);
 	this->physics->update();
 
-	this->ninja->Update(delta);
+	this->ninja->Update(_dt);
+
+	std::list<Enemy*>::iterator enemy;
+	for (enemy = this->enemies.begin(); enemy != this->enemies.end(); enemy++) {
+		(*enemy)->Update(_dt);
+	}
 }
 
 void Scene1::processInput()

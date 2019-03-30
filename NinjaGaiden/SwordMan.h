@@ -11,7 +11,7 @@ class SwordMan : public Enemy
 public:
 	SwordMan(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, int _nWidth, int _nHeight, float _fVelocityX, float _fVelocityY);
 	~SwordMan();
-	void Update();
+	void Update(DWORD _dt);
 	void ai(Box* box);
 private:
 	SwordManControl * control;

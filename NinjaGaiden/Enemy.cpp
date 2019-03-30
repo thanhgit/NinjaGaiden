@@ -14,7 +14,7 @@ Enemy::~Enemy()
 {
 }
 
-void Enemy::Update()
+void Enemy::Update(DWORD _dt)
 {
 }
 

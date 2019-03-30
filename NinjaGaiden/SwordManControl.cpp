@@ -1,8 +1,9 @@
 #include"SwordManControl.h"
 
-
-
-#include"JumpParabolRight.h"
+#include"SwordManRunLeft.h"
+#include"SwordManRunRight.h"
+#include"SwordManAttackLeft.h"
+#include"SwordManAttackRight.h"
 
 #include<typeinfo>
 
@@ -27,6 +28,24 @@ SwordManControl::~SwordManControl()
 
 void SwordManControl::changeState(SwordManState * _state, Box* _swordMan)
 {
+
+	this->swordMan = _swordMan;
+	this->state = _state;
+	if (SameType(new SwordManRunLeft()) || SameType(new SwordManRunRight())) {
+		if (this->indexRun > 3) {
+			this->indexRun = 0;
+			if (SameType(new SwordManRunLeft())) {
+				this->state = new SwordManRunLeft(this->graphics);
+			}
+			else {
+				this->state = new SwordManRunRight(this->graphics);
+			}
+		}
+		else {
+			this->indexRun++;
+			Sleep(20);
+		}
+	}
 
 	this->state->update(this->swordMan);
 }

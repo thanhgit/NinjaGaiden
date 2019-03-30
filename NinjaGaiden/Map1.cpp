@@ -18,7 +18,7 @@ Map1::Map1(LPDIRECT3DDEVICE9 _d3ddv, Camera* camera, LPWSTR _spriteSheet, LPWSTR
 	ReadMap("data/map1/map.txt");
 	ReadRecs("data/map1/maprecs.txt");
 	ReadStatics("data/map1/mapitems.txt");
-	ReadEnemies("data/map1/mapenemies.txt");
+	ReadEnemies("data/map1/mapenemy.txt");
 	this->imgmap = new Sprite(this->d3ddv, this->camera, L"data/map1/map.png", 80, 80, 16, 16, D3DCOLOR_XRGB(255, 255, 0));
 	this->map = (Sprite**)malloc(sizeof(Sprite *)*(Utils::VIEWPORT_WIDTH_COL*Utils::VIEWPORT_HEIGHT_COL));
 }
@@ -86,9 +86,9 @@ void Map1::ReadRecs(char * _filename)
 				raw.erase(0, raw.find_first_of(" ") + 1);
 			}
 
-			Box* box = new Box(x, Utils::WORLMAP_HEIGHT - y - height / 2 - 5, width, height, 0, 0);
+			Box* box = new Box(x, Utils::WORLMAP_HEIGHT - y - height / 2, width, height, 0, 0);
 			this->recs.push_back(box);
-			Rec* rec = new Rec(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y - height / 2 - 5, width, height, 0, 0);
+			Rec* rec = new Rec(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y - height / 2, width, height, 0, 0);
 			this->recsObj.push_back(rec);
 		}
 	}

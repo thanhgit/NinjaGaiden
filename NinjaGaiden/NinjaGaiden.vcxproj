@@ -175,6 +175,7 @@
     <ClCompile Include="PhisicalInteraction.cpp" />
     <ClCompile Include="Scene2.cpp" />
     <ClCompile Include="Scene3.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Static.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Log.cpp" />
@@ -235,6 +236,7 @@
     <ClInclude Include="PhysicalInteraction.h" />
     <ClInclude Include="Scene2.h" />
     <ClInclude Include="Scene3.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Static.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="Log.h" />

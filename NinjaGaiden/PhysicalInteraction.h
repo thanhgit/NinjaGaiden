@@ -14,12 +14,15 @@ public:
 	void update();
 	void SetEnemies(std::list<Enemy*> _enemies);
 	void SetRecs(std::list<Box*> _recs) {
-		this->objWithMap->SetRecs(_recs);
+		this->ninjaWithMap->SetRecs(_recs);
 	}
 private:
-	ObjectWithMap* objWithMap;
+	ObjectWithMap* ninjaWithMap;
+
+
 
 	Ninja* ninja;
+	std::list<Enemy*> enemies;
 };
 
 

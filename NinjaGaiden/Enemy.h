@@ -9,7 +9,7 @@ class Enemy : public Object
 public:
 	Enemy(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, int _nWidth, int _nHeight, float _fVelocityX, float _fVelocityY);
 	~Enemy();
-	void Update();
+	void Update(DWORD _dt);
 	void Dead();
 	void SetKeyboard(Keyboard* keyboard);
 
