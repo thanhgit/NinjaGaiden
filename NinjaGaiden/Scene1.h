@@ -9,6 +9,7 @@
 
 #include"GameScene.h"
 #include"SwordMan.h"
+#include"BirdBrown.h"
 
 #include"PhysicalInteraction.h"
 #include<list>

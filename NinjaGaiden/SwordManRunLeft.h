@@ -15,4 +15,4 @@ private:
 
 
 
-#endif // !SIMON_Run_LEFT
+#endif

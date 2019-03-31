@@ -150,6 +150,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BirdBrown.cpp" />
+    <ClCompile Include="BirdBrownControl.cpp" />
+    <ClCompile Include="BirdBrownGraphics.cpp" />
+    <ClCompile Include="BirdBrownRunLeft.cpp" />
+    <ClCompile Include="BirdBrownRunRight.cpp" />
+    <ClCompile Include="BirdBrownState.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Hurt.cpp" />
     <ClCompile Include="Interaction.cpp" />
@@ -211,6 +217,12 @@
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BirdBrownGraphics.h" />
+    <ClInclude Include="BirdBrown.h" />
+    <ClInclude Include="BirdBrownControl.h" />
+    <ClInclude Include="BirdBrownRunLeft.h" />
+    <ClInclude Include="BirdBrownRunRight.h" />
+    <ClInclude Include="BirdBrownState.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Hurt.h" />
     <ClInclude Include="Interaction.h" />

@@ -35,8 +35,13 @@ void Scene1::init()
 	SwordMan* swordMan;
 	swordMan = new SwordMan(GetDevice(), GetCamera(), 100, 200, 16, 32, 0, 0);
 
+	// sword man
+	BirdBrown* birdBrown;
+	birdBrown = new BirdBrown(GetDevice(), GetCamera(), 50, 100, 17, 25, 0, 0);
+
 	enemies = this->map->GetEnemies();
 	enemies.push_back(swordMan);
+	enemies.push_back(birdBrown);
 
 	this->physics = new PhysicalInteraction(this->ninja);
 	this->physics->SetEnemies(enemies);

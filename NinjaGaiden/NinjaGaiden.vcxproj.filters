@@ -154,6 +154,18 @@
     <Filter Include="Scene\SceneManager">
       <UniqueIdentifier>{12199c64-6762-4fc8-8dfb-7ae8569ff93c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Enemy\BirdBrown">
+      <UniqueIdentifier>{f6ad04fa-4f08-4469-8d17-1d3f99cf1fb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\BirdBrown\graphics">
+      <UniqueIdentifier>{7ca8fda0-65a0-4632-90ae-6ee3376059f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\BirdBrown\state">
+      <UniqueIdentifier>{d389dc52-4676-4bf8-8c9c-359c2a3469df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\BirdBrown\state\Run">
+      <UniqueIdentifier>{9a11c809-ce02-4c2d-8831-457b0cb0f529}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -333,6 +345,24 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>Scene\SceneManager</Filter>
     </ClCompile>
+    <ClCompile Include="BirdBrownGraphics.cpp">
+      <Filter>Object\Enemy\BirdBrown\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdBrownRunLeft.cpp">
+      <Filter>Object\Enemy\BirdBrown\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdBrownRunRight.cpp">
+      <Filter>Object\Enemy\BirdBrown\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdBrown.cpp">
+      <Filter>Object\Enemy\BirdBrown</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdBrownControl.cpp">
+      <Filter>Object\Enemy\BirdBrown</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdBrownState.cpp">
+      <Filter>Object\Enemy\BirdBrown</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -505,6 +535,24 @@
     </ClInclude>
     <ClInclude Include="SceneManager.h">
       <Filter>Scene\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdBrownRunLeft.h">
+      <Filter>Object\Enemy\BirdBrown\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdBrownRunRight.h">
+      <Filter>Object\Enemy\BirdBrown\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdBrown.h">
+      <Filter>Object\Enemy\BirdBrown</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdBrownControl.h">
+      <Filter>Object\Enemy\BirdBrown</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdBrownState.h">
+      <Filter>Object\Enemy\BirdBrown</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdBrownGraphics.h">
+      <Filter>Object\Enemy\BirdBrown\graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
