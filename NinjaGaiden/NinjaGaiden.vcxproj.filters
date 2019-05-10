@@ -166,6 +166,12 @@
     <Filter Include="Object\Enemy\BirdBrown\state\Run">
       <UniqueIdentifier>{9a11c809-ce02-4c2d-8831-457b0cb0f529}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Ninja\state\Jump\Normal">
+      <UniqueIdentifier>{c4e253b8-a58a-45de-982d-23838c64550d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interaction\NinjaWithEnemy">
+      <UniqueIdentifier>{a4d8d1b5-681b-4638-bb74-0b3261be38f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -363,6 +369,15 @@
     <ClCompile Include="BirdBrownState.cpp">
       <Filter>Object\Enemy\BirdBrown</Filter>
     </ClCompile>
+    <ClCompile Include="JumpNormalLeft.cpp">
+      <Filter>Object\Ninja\state\Jump\Normal</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpNormalRight.cpp">
+      <Filter>Object\Ninja\state\Jump\Normal</Filter>
+    </ClCompile>
+    <ClCompile Include="NinjaWithEnemy.cpp">
+      <Filter>Interaction\NinjaWithEnemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -553,6 +568,15 @@
     </ClInclude>
     <ClInclude Include="BirdBrownGraphics.h">
       <Filter>Object\Enemy\BirdBrown\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpNormalLeft.h">
+      <Filter>Object\Ninja\state\Jump\Normal</Filter>
+    </ClInclude>
+    <ClInclude Include="JumpNormalRight.h">
+      <Filter>Object\Ninja\state\Jump\Normal</Filter>
+    </ClInclude>
+    <ClInclude Include="NinjaWithEnemy.h">
+      <Filter>Interaction\NinjaWithEnemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

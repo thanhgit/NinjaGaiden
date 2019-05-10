@@ -9,12 +9,9 @@ class Enemy : public Object
 public:
 	Enemy(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, int _nWidth, int _nHeight, float _fVelocityX, float _fVelocityY);
 	~Enemy();
-	void Update(DWORD _dt);
-	void Dead();
-	void SetKeyboard(Keyboard* keyboard);
 
-	void setDelta(DWORD _delta);
-
+	virtual void Update(DWORD _dt)=0;
+	virtual void Dead()=0;
 	virtual void ai(Box* box)=0;
 
 	void SetActive(bool _active) {
@@ -23,8 +20,6 @@ public:
 	bool GetActive() {
 		return this->active;
 	}
-
-	virtual void changeDirection();
 
 	int GetDamage() {
 		return this->m_damage;

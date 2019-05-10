@@ -154,8 +154,8 @@ void Map3::ReadEnemies(char * _fileName)
 	if (myfile.is_open()) {
 		while (getline(myfile, line)) {
 			string raw = line;
-			int x = 0;
-			int y = 0;
+			float x = 0;
+			float y = 0;
 			int width = 0;
 			int height = 0;
 			string type = "";

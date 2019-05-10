@@ -1,7 +1,7 @@
-﻿  Scene1.cpp
+﻿  SwordMan.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\scene1.h(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\scene1.h(8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\gamescene.h(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\swordman.cpp(29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\swordman.cpp(34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\administrator\desktop\ninjagaiden\ninjagaiden\swordman.cpp(37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   NinjaGaiden.vcxproj -> C:\Users\Administrator\Desktop\NinjaGaiden\Debug\NinjaGaiden.exe
   NinjaGaiden.vcxproj -> C:\Users\Administrator\Desktop\NinjaGaiden\Debug\NinjaGaiden.pdb (Full PDB)

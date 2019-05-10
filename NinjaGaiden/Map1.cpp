@@ -183,7 +183,7 @@ void Map1::ReadEnemies(char * _fileName)
 
 			if (type == "zombie") {
 				Enemy* obj = new SwordMan(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y , width, height, 0, 0);
-				this->enemies.push_back(obj);
+				//this->enemies.push_back(obj);
 			}
 		}
 	}

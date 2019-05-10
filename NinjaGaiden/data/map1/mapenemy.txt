@@ -1,2 +1,4 @@
-311 90 16 31 enemy zombie
-389 90 16 31 enemy zombie
+311 60 16 31 enemy zombie
+389 60 16 31 enemy zombie
+311 60 16 31 enemy zombie
+389 60 16 31 enemy zombie

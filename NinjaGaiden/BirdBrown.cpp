@@ -45,3 +45,10 @@ void BirdBrown::ai(Box* box)
 {
 	this->obj = box;
 }
+
+void BirdBrown::Dead()
+{
+	this->SetActive(false);
+	this->GetBody()->SetX(-100);
+	this->GetBody()->SetY(-100);
+}

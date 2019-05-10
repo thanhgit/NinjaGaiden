@@ -28,7 +28,6 @@ SwordManControl::~SwordManControl()
 
 void SwordManControl::changeState(SwordManState * _state, Box* _swordMan)
 {
-
 	this->swordMan = _swordMan;
 	this->state = _state;
 	if (SameType(new SwordManRunLeft()) || SameType(new SwordManRunRight())) {
@@ -43,7 +42,7 @@ void SwordManControl::changeState(SwordManState * _state, Box* _swordMan)
 		}
 		else {
 			this->indexRun++;
-			Sleep(20);
+			Sleep(80);
 		}
 	}
 

@@ -160,8 +160,10 @@
     <ClCompile Include="Hurt.cpp" />
     <ClCompile Include="Interaction.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="JumpNormalLeft.cpp" />
     <ClCompile Include="JumpParabolLeft.cpp" />
     <ClCompile Include="JumpParabolRight.cpp" />
+    <ClCompile Include="JumpNormalRight.cpp" />
     <ClCompile Include="JumpVerticalRight.cpp" />
     <ClCompile Include="JumpVerticalLeft.cpp" />
     <ClCompile Include="Map1.cpp" />
@@ -177,6 +179,7 @@
     <ClCompile Include="NinjaStandLeft.cpp" />
     <ClCompile Include="NinjaStandRight.cpp" />
     <ClCompile Include="NinjaState.cpp" />
+    <ClCompile Include="NinjaWithEnemy.cpp" />
     <ClCompile Include="ObjectWithMap.cpp" />
     <ClCompile Include="PhisicalInteraction.cpp" />
     <ClCompile Include="Scene2.cpp" />
@@ -227,8 +230,10 @@
     <ClInclude Include="Hurt.h" />
     <ClInclude Include="Interaction.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="JumpNormalLeft.h" />
     <ClInclude Include="JumpParabolLeft.h" />
     <ClInclude Include="JumpParabolRight.h" />
+    <ClInclude Include="JumpNormalRight.h" />
     <ClInclude Include="JumpVerticalLeft.h" />
     <ClInclude Include="JumpVerticalRight.h" />
     <ClInclude Include="Map1.h" />
@@ -244,6 +249,7 @@
     <ClInclude Include="NinjaStandLeft.h" />
     <ClInclude Include="NinjaStandRight.h" />
     <ClInclude Include="NinjaState.h" />
+    <ClInclude Include="NinjaWithEnemy.h" />
     <ClInclude Include="ObjectWithMap.h" />
     <ClInclude Include="PhysicalInteraction.h" />
     <ClInclude Include="Scene2.h" />

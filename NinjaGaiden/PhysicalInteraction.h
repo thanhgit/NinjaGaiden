@@ -1,6 +1,7 @@
 #ifndef PHYSICAL_INTERACTION_H
 #define PHYSICAL_INTERACTION_H
 #include"ObjectWithMap.h"
+#include"NinjaWithEnemy.h"
 #include"Box.h"
 #include"Ninja.h"
 #include"Object.h"
@@ -18,7 +19,7 @@ public:
 	}
 private:
 	ObjectWithMap* ninjaWithMap;
-
+	NinjaWithEnemy* ninjaWithEnemy;
 
 
 	Ninja* ninja;

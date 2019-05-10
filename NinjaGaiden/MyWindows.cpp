@@ -51,9 +51,6 @@ void MyWindows::Run() {
 		else {			
 			Sleep(timePerFrame - this->delta);
 		}
-		
-
-
 	}
 }
 

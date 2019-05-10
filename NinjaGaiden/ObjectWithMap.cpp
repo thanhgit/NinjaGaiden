@@ -20,22 +20,21 @@ void ObjectWithMap::NinjaInteractMap()
 		float time = collisionNinja->GetCollisonTime();
 
 		if (collisionNinja->GetDirection() == DOWN) {
-			if (this->ninja->IsJump()) {
-				int y = this->ninja->GetBody()->GetY() + time*this->ninja->GetBody()->GetVelocityY() + 55;
+			if (this->ninja->IsJumpNormal()) {
+				float y = this->ninja->GetBody()->GetY() + time*this->ninja->GetBody()->GetVelocityY() +5;
 				this->ninja->normal();
 				this->ninja->GetBody()->SetY(y);
 			}
 			else {
-				int y = this->ninja->GetBody()->GetY() + time*this->ninja->GetBody()->GetVelocityY()+5;
+				float y = this->ninja->GetBody()->GetY() + time*this->ninja->GetBody()->GetVelocityY()+5;
 				this->ninja->normal();
 				this->ninja->GetBody()->SetY(y);
 			}
 
-			if (this->ninja->GetBody()->GetX() > 780) {
+			if (this->ninja->IsJumpParabol()) {
 				this->ninja->normal();
-
 			}
-			
+		
 		}
 		else if (collisionNinja->GetDirection() == LEFT) {
 			this->ninja->GetBody()->SetX(this->ninja->GetBody()->GetX() + (1 - time) * 16);
@@ -60,7 +59,7 @@ void ObjectWithMap::EnemiesInteractMap()
 			if (collition->GetDirection() == DOWN) {
 				float time = collition->GetCollisonTime();
 				(*obj)->normal();
-				int y = (*rec)->GetY() + 40;
+				float y = (*rec)->GetY() + 40;
 				(*obj)->GetBody()->SetY(y);
 			}
 			else if (collition->GetDirection() == LEFT) {
@@ -70,7 +69,7 @@ void ObjectWithMap::EnemiesInteractMap()
 				(*obj)->GetBody()->SetX(x);
 				if (DependTypeEnemy(*obj)) {
 					Enemy* enemy = (Enemy*)*obj;
-					enemy->changeDirection();
+					//enemy->changeDirection();
 				}
 			}
 			else if (collition->GetDirection() == RIGHT) {
@@ -80,7 +79,7 @@ void ObjectWithMap::EnemiesInteractMap()
 				(*obj)->GetBody()->SetX(x);
 				if (DependTypeEnemy(*obj)) {
 					Enemy* enemy = (Enemy*)*obj;
-					enemy->changeDirection();
+					//enemy->changeDirection();
 				}
 			}
 		}

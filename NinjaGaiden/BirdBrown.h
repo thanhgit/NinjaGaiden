@@ -13,6 +13,7 @@ public:
 	~BirdBrown();
 	void Update(DWORD _dt);
 	void ai(Box* box);
+	void Dead();
 private:
 	BirdBrownControl * control;
 	BirdBrownGraphics* graphics;

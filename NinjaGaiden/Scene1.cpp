@@ -27,13 +27,13 @@ void Scene1::init()
 	this->recs = map->GetRecs();
 
 	// player
-	this->ninja = new Ninja(GetDevice(), GetCamera(), 30, 200, 16, 32, 0, 0);
+	this->ninja = new Ninja(GetDevice(), GetCamera(), 50, 70, 16, 32, 0, 0);
 	this->ninja->SetKeyboard(this->GetKeyboard());
 	this->SetPlayer(this->ninja);
 
 	// sword man
 	SwordMan* swordMan;
-	swordMan = new SwordMan(GetDevice(), GetCamera(), 100, 200, 16, 32, 0, 0);
+	swordMan = new SwordMan(GetDevice(), GetCamera(), 50, 60, 16, 32, 0, 0);
 
 	// sword man
 	BirdBrown* birdBrown;
@@ -41,7 +41,7 @@ void Scene1::init()
 
 	enemies = this->map->GetEnemies();
 	enemies.push_back(swordMan);
-	enemies.push_back(birdBrown);
+	//enemies.push_back(birdBrown);
 
 	this->physics = new PhysicalInteraction(this->ninja);
 	this->physics->SetEnemies(enemies);

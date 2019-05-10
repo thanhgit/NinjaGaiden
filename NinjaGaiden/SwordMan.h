@@ -13,6 +13,7 @@ public:
 	~SwordMan();
 	void Update(DWORD _dt);
 	void ai(Box* box);
+	void Dead();
 private:
 	SwordManControl * control;
 	SwordManGraphics* graphics;

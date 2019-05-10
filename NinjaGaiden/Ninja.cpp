@@ -9,6 +9,8 @@
 #include"NinjaAttackRight.h"
 
 // jump
+#include"JumpNormalLeft.h"
+#include"JumpNormalRight.h"
 #include"JumpVerticalLeft.h"
 #include"JumpVerticalRight.h"
 #include"JumpParabolLeft.h"
@@ -33,6 +35,8 @@ Ninja::Ninja(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, 
 
 	x_save = 0;
 	x_save = 0;
+
+	this->hurt = new Hurt(_lpD3ddv, camera, -100, -100, 8, 10, 0, 0 );
 }
 
 Ninja::~Ninja()
@@ -42,23 +46,28 @@ Ninja::~Ninja()
 void Ninja::Update(DWORD _dt)
 {
 	// GRAVITY = 0.3F
-	UpdateWeapon();
+	UpdateWeapon(_dt);
 	this->GetBody()->SetVelocityY(-0.3f *_dt);
 	float y = this->GetBody()->GetY() + this->GetBody()->GetVelocityY();
 	this->GetBody()->SetY(y);
 	UpdateCamera();
 
-	if (this->keyboard->KeyDown(DIK_LEFT) && !IsJump()) {
+	if (this->keyboard->KeyDown(DIK_LEFT) && (!IsJump() || IsJumpNormalLeft())) {
 		if (this->keyboard->KeyDown(DIK_L) && this->allowJump) {
 			ActionJumpParabolLeft(_dt);
 		}
-		else {
+		else if (IsJumpNormalLeft()) {
+			ActionJumpRunNormalLeft(_dt);
+		} else {
 			ActionRunLeft(_dt);
 		}
 	}
-	else if (this->keyboard->KeyDown(DIK_RIGHT) && !IsJump()) {
+	else if (this->keyboard->KeyDown(DIK_RIGHT) && (!IsJump() || IsJumpNormalRight())) {
 		if (this->keyboard->KeyDown(DIK_L) && this->allowJump) {
 			ActionJumpParabolRight(_dt);
+		}
+		else if (IsJumpNormalRight()) {
+			ActionJumpRunNormalRight(_dt);
 		}
 		else {
 			ActionRunRight(_dt);
@@ -69,9 +78,15 @@ void Ninja::Update(DWORD _dt)
 	}
 	else if (this->keyboard->KeyDown(DIK_K) && !IsActack()) {
 		if (IsLeft()) {
+			this->hurt->GetBody()->SetX(this->body->GetX());
+			this->hurt->GetBody()->SetY(56);
+			this->hurt->AttackLeft();
 			this->control->changeState(new NinjaAttackLeft(this->graphics), this->GetBody());
 		}
 		else if (IsRight()) {
+			this->hurt->GetBody()->SetX(this->body->GetX());
+			this->hurt->GetBody()->SetY(56);
+			this->hurt->AttackRight();
 			this->control->changeState(new NinjaAttackRight(this->graphics), this->GetBody());
 		}
 	}
@@ -107,6 +122,14 @@ void Ninja::Update(DWORD _dt)
 				}
 				else if (IsRight()) {
 					ActionJumpParabolRight(_dt);
+				}
+			}
+			else {
+				if (IsLeft()) {
+					ActionJumpNormalLeft(_dt);
+				}
+				else {
+					ActionJumpNormalRight(_dt);
 				}
 			}
 		}
@@ -165,14 +188,14 @@ void Ninja::restore()
 
 void Ninja::Dead()
 {
-	
+	this->GetBody()->SetY(this->GetBody()->GetY() + 100);
 }
 
 void Ninja::ActionRunLeft(DWORD _dt)
 {
 	this->isRun = true;
-	this->body->SetVelocityX(-0.2);
-	float x = this->body->GetX() + this->body->GetVelocityX()*_dt;
+	this->body->SetVelocityX(-0.2*_dt);
+	float x = this->body->GetX() + this->body->GetVelocityX();
 	this->body->SetX(x);
 	this->control->changeState(new NinjaRunLeft(this->graphics), this->GetBody());
 }
@@ -180,8 +203,8 @@ void Ninja::ActionRunLeft(DWORD _dt)
 void Ninja::ActionRunRight(DWORD _dt)
 {
 	this->isRun = true;
-	this->body->SetVelocityX(0.2);
-	float x = this->body->GetX() + this->body->GetVelocityX()*_dt;
+	this->body->SetVelocityX(0.2*_dt);
+	float x = this->body->GetX() + this->body->GetVelocityX();
 	this->body->SetX(x);
 	this->control->changeState(new NinjaRunRight(this->graphics), this->GetBody());
 }
@@ -256,7 +279,48 @@ bool Ninja::IsActack()
 
 bool Ninja::IsJump()
 {
-	return (IsJumpVertical() || IsJumpParabol());
+	return (IsJumpVertical() || IsJumpParabol() || IsJumpNormal());
+}
+
+bool Ninja::IsJumpNormal()
+{
+	return (IsJumpNormalLeft() || IsJumpNormalRight());
+}
+
+bool Ninja::IsJumpNormalLeft()
+{
+	return (typeid(*this->control->getState()) == typeid(JumpNormalLeft));
+}
+
+bool Ninja::IsJumpNormalRight()
+{
+	return (typeid(*this->control->getState()) == typeid(JumpNormalRight));;
+}
+
+void Ninja::ActionJumpNormalLeft(DWORD _dt)
+{
+	this->control->changeState(new JumpNormalLeft(this->graphics), this->GetBody());
+}
+
+void Ninja::ActionJumpNormalRight(DWORD _dt)
+{
+	this->control->changeState(new JumpNormalRight(this->graphics), this->GetBody());
+}
+
+void Ninja::ActionJumpRunNormalLeft(DWORD _dt)
+{
+	this->body->SetVelocityX(-0.2);
+	float x = this->body->GetX() + this->body->GetVelocityX()*_dt;
+	this->body->SetX(x);
+	this->control->changeState(new JumpNormalLeft(this->graphics), this->GetBody());
+}
+
+void Ninja::ActionJumpRunNormalRight(DWORD _dt)
+{
+	this->body->SetVelocityX(0.2);
+	float x = this->body->GetX() + this->body->GetVelocityX()*_dt;
+	this->body->SetX(x);
+	this->control->changeState(new JumpNormalRight(this->graphics), this->GetBody());
 }
 
 bool Ninja::IsJumpVertical()
@@ -277,7 +341,7 @@ bool Ninja::IsJumpVerticalRight()
 void Ninja::ActionJumpVerticalLeft(DWORD _dt)
 {
 	float x = this->control->indexJumpVertical;
-	float y = -((x - 3)*(x - 4)*(x - 4)) + 2;
+	float y = -((x - 3)*(x - 5)*(x - 5)) - 7;
 
 	this->body->SetY(this->body->GetY() + y);
 
@@ -287,7 +351,7 @@ void Ninja::ActionJumpVerticalLeft(DWORD _dt)
 void Ninja::ActionJumpVerticalRight(DWORD _dt)
 {
 	float x = this->control->indexJumpVertical;
-	float y = -((x - 3)*(x - 5)*(x - 5)) - 5;
+	float y = -((x - 3)*(x - 5)*(x - 5)) - 7;
 
 	this->body->SetY(this->body->GetY() + y);
 	this->control->changeState(new JumpVerticalRight(this->graphics), this->GetBody());
@@ -317,7 +381,7 @@ void Ninja::ActionJumpParabolLeft(DWORD _dt)
 	float y = -((x - 3)*(x - 5)*(x - 5)) - 5;
 
 	this->body->SetY(this->body->GetY() + y);
-	this->body->SetX(this->body->GetX() + this->body->GetVelocityX()*(_dt+15));
+	this->body->SetX(this->body->GetX() + this->body->GetVelocityX());
 
 	this->control->changeState(new JumpParabolLeft(this->graphics), this->GetBody());
 }
@@ -329,8 +393,9 @@ void Ninja::ActionJumpParabolRight(DWORD _dt)
 	float x = this->control->indexJumpParabol;
 	float y = -((x - 3)*(x - 5)*(x - 5)) - 5;
 
+
 	this->body->SetY(this->body->GetY() + y);
-	this->body->SetX(this->body->GetX() + this->body->GetVelocityX()*(_dt+15));
+	this->body->SetX(this->body->GetX() + this->body->GetVelocityX());
 	this->control->changeState(new JumpParabolRight(this->graphics), this->GetBody());
 }
 
@@ -338,13 +403,13 @@ void Ninja::ActionJumpParabolRight(DWORD _dt)
 bool Ninja::IsLeft()
 {
 	return (IsStandLeft() || IsRunLeft() || IsActackLeft() ||
-		IsJumpVerticalLeft() || IsJumpParabolLeft());
+		IsJumpVerticalLeft() || IsJumpParabolLeft() || IsJumpNormalLeft());
 }
 
 bool Ninja::IsRight()
 {
 	return (IsStandRight() || IsRunRight() || IsActackRight() ||
-		IsJumpVerticalRight() || IsJumpParabolRight());
+		IsJumpVerticalRight() || IsJumpParabolRight() || IsJumpNormalRight());
 }
 
 void Ninja::UpdateCamera()
@@ -370,7 +435,7 @@ void Ninja::UpdateCamera()
 
 }
 
-void Ninja::UpdateWeapon()
-{
-
+void Ninja::UpdateWeapon(DWORD _dt)
+{	
+	this->hurt->Update(_dt);
 }

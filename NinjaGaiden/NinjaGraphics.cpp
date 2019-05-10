@@ -56,6 +56,28 @@ void NinjaGraphics::runRight(float fX, float fY)
 	this->ninja->Next();
 }
 
+void NinjaGraphics::jumpLeft(float fX, float fY)
+{
+	int index = this->ninjaJump->GetIndex();
+	if (index > 3) {
+		this->ninjaJump->SetIndex(0);
+	}
+
+	this->ninjaJump->Draw(fX, fY);
+	this->ninjaJump->Next();
+}
+
+void NinjaGraphics::jumpRight(float fX, float fY)
+{
+	int index = this->ninjaJump->GetIndex();
+	if (index < 4) {
+		this->ninjaJump->SetIndex(4);
+	}
+
+	this->ninjaJump->Draw(fX, fY);
+	this->ninjaJump->Next();
+}
+
 void NinjaGraphics::jumpVerticalLeft(float fX, float fY)
 {
 	int index = this->ninjaJump->GetIndex();

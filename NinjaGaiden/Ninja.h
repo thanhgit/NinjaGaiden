@@ -7,6 +7,7 @@
 
 #include"NinjaControl.h"
 #include"NinjaGraphics.h"
+#include"Hurt.h"
 
 
 #include"Log.h"
@@ -43,6 +44,15 @@ public:
 
 	// jump
 	bool IsJump();
+
+	bool IsJumpNormal();
+	bool IsJumpNormalLeft();
+	bool IsJumpNormalRight();
+
+	void ActionJumpNormalLeft(DWORD _dt);
+	void ActionJumpNormalRight(DWORD _dt);
+	void ActionJumpRunNormalLeft(DWORD _dt);
+	void ActionJumpRunNormalRight(DWORD _dt);
 
 	bool IsJumpVertical();
 	bool IsJumpVerticalLeft();
@@ -121,6 +131,11 @@ public:
 		return this->allowJump;
 	}
 
+	// hurt
+	Hurt* GetHurt() {
+		return this->hurt;
+	}
+
 public:
 	///////// simon 
 	int m_heart;
@@ -141,6 +156,7 @@ public:
 	Keyboard* keyboard;
 	Camera* camera;
 	DWORD delta;
+	Hurt* hurt;
 
 	void ActionRunLeft(DWORD _dt);
 	void ActionRunRight(DWORD _dt);
@@ -151,7 +167,7 @@ public:
 	bool IsRun();
 
 	void UpdateCamera();
-	void UpdateWeapon();
+	void UpdateWeapon(DWORD _dt);
 };
 
 #endif // !SIMON_H

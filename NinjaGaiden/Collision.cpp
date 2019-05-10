@@ -62,12 +62,10 @@ void Collision::collision(Box* other) {
 
 		}
 
-		if (normalX == 0.0f && normalY == 0.0f) {
-			
-		}
 	}
-	//this->MyBox->SetX(this->MyBox->GetX() + this->MyBox->GetVelocityX());
-	//this->MyBox->SetY(this->MyBox->GetY() + this->MyBox->GetVelocityY());
+
+	/*this->MyBox->SetX(this->MyBox->GetX() - this->MyBox->GetVelocityX());
+	this->MyBox->SetY(this->MyBox->GetY() - this->MyBox->GetVelocityY());*/
 }
 
 float Collision::collision(Box other, float& normalX, float& normalY)

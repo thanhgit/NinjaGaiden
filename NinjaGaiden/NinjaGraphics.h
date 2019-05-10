@@ -18,6 +18,9 @@ public:
 	void runRight(float fX, float fY);
 
 	// jump
+	void jumpLeft(float fX, float fY);
+	void jumpRight(float fX, float fY);
+
 	void jumpVerticalLeft(float fX, float fY);
 	void jumpVerticalRight(float fX, float fY);
 	

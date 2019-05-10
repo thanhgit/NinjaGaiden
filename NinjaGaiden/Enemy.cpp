@@ -13,28 +13,3 @@ Enemy::Enemy(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, 
 Enemy::~Enemy()
 {
 }
-
-void Enemy::Update(DWORD _dt)
-{
-}
-
-void Enemy::Dead()
-{
-}
-
-
-void Enemy::SetKeyboard(Keyboard * _keyboard)
-{
-	this->keyboard = _keyboard;
-}
-
-
-
-void Enemy::setDelta(DWORD _delta)
-{
-	this->delta = _delta;
-}
-
-void Enemy::changeDirection()
-{
-}
