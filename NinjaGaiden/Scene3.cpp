@@ -29,21 +29,55 @@ void Scene3::init()
 	// player
 	this->ninja = new Ninja(GetDevice(), GetCamera(), 30, 200, 16, 32, 0, 0);
 	this->ninja->SetKeyboard(this->GetKeyboard());
+	this->ninja->setUpdateCamera(false);
 	this->SetPlayer(this->ninja);
 
 	this->physics = new PhysicalInteraction(this->ninja);
+	this->physics->SetEnemies(enemies);
+	this->quadtree = this->map->GetQuadTree();
+
 	list<Object*> listObj;
 	physics->SetRecs(this->recs);
 
-	stage = 1;
+	this->stage = 3;
 }
 
-void Scene3::update(DWORD delta)
+void Scene3::update(DWORD _dt)
 {
-	map->Update(delta);
+	map->Update(_dt);
 	this->physics->update();
 
-	this->ninja->Update(delta);
+	this->ninja->Update(_dt);
+
+	for (auto node : this->quadtree) {
+		if (node->getRegion()->getObjs().size() == 0) {
+			continue;
+		}
+		else if (node->containCamera(camera->GetX(), camera->GetY(), camera->GetWidth(), camera->GetHeight())) {
+			for (auto obj : node->getRegion()->getObjs()) {
+				Enemy* enemy = (Enemy*)obj;
+				this->enemies.push_back(enemy);
+			}
+
+			node->getRegion()->clearObjects();
+
+			this->physics->SetEnemies(this->enemies);
+			//this->quadtree.remove(node);
+		}
+	}
+
+	std::list<Enemy*>::iterator enemy;
+
+	for (enemy = this->enemies.begin(); enemy != this->enemies.end(); enemy++) {
+
+		if ((*enemy)->GetBody()->GetY() > 300) {
+			this->enemies.remove(*enemy);
+		}
+		else {
+			(*enemy)->Update(_dt);
+		}
+
+	}
 }
 
 void Scene3::processInput()

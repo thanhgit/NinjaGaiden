@@ -27,6 +27,7 @@ private:
 	list<Box*> recs;
 
 	Ninja * ninja;
+	std::list<Enemy*> enemies;
 
 	Map* map;
 	Log* log;

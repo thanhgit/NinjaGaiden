@@ -33,7 +33,7 @@ void NinjaWithEnemy::EnemyInteractNinja()
 	std::list<Enemy*>::iterator obj;
 	for (obj = this->enemies.begin(); obj != this->enemies.end(); obj++) {
 		Collision* collisionEnemy = new Collision((*obj)->GetBody());
-		collisionEnemy->collision(this->ninja->GetBody());
+		collisionEnemy->collision(this->ninja->GetHurt()->GetBody());
 		float time = collisionEnemy->GetCollisonTime();
 
 		if (collisionEnemy->GetDirection() != NONE) {

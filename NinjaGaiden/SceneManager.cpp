@@ -24,23 +24,15 @@ SceneManager::~SceneManager()
 
 void SceneManager::add(Scene * scene)
 {
-	
 	if (scene != nullptr) {
-		std::list<Scene*>::iterator it;
-		for (it = this->scenes.begin(); it != this->scenes.end(); it++) {
-			if (SameType(*it, scene)) {
-				return;
-			}
-		}
-
 		this->scenes.push_back(scene);
 	}
 }
 
-void SceneManager::remove(Scene * scene)
+void SceneManager::pop()
 {
-	if (scene != nullptr) {
-		this->scenes.remove(scene);
+	if (this->scenes.size() > 0) {
+		this->scenes.pop_back();
 	}
 }
 
@@ -48,9 +40,7 @@ Scene * SceneManager::GetScene(int index)
 {
 	int lengthOfSceneList = this->scenes.size();
 	if (index < lengthOfSceneList) {
-		std::list<Scene*>::iterator it = this->scenes.begin();
-		std::advance(it, index);
-		return *it;
+		return this->scenes.at(index);
 	}
 
 	return nullptr;

@@ -1,9 +1,6 @@
 #include "Map1.h"
 #include"Utils.h"
 
-#include"Ninja.h"
-#include"SwordMan.h"
-
 Map1::Map1()
 {}
 
@@ -19,6 +16,7 @@ Map1::Map1(LPDIRECT3DDEVICE9 _d3ddv, Camera* camera, LPWSTR _spriteSheet, LPWSTR
 	ReadRecs("data/map1/maprecs.txt");
 	ReadStatics("data/map1/mapitems.txt");
 	ReadEnemies("data/map1/mapenemy.txt");
+	ReadQuadtree("data/map1/mapquadtree.txt");
 	this->imgmap = new Sprite(this->d3ddv, this->camera, L"data/map1/map.png", 80, 80, 16, 16, D3DCOLOR_XRGB(255, 255, 0));
 	this->map = (Sprite**)malloc(sizeof(Sprite *)*(Utils::VIEWPORT_WIDTH_COL*Utils::VIEWPORT_HEIGHT_COL));
 }
@@ -135,10 +133,15 @@ void Map1::ReadStatics(char * _filename)
 				raw.erase(0, raw.find_first_of(" ") + 1);
 			}
 
-			/*if (type == "bigfire") {
-			Static* obj = new BigFire(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y - 10, width, height, 0, 0, itemName);
-			this->statics.push_back(obj);
-			}*/
+			if (type == "bird") {
+				Bird* obj = new Bird(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y, width, height, 0, 0);
+				//this->items.push_back(obj);
+			}
+
+			if (type == "itemcontainer4") {
+				ItemContainer4* obj = new ItemContainer4(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y, width, height, 0, 0);
+				//this->items.push_back(obj);
+			}
 		}
 	}
 
@@ -181,11 +184,80 @@ void Map1::ReadEnemies(char * _fileName)
 				raw.erase(0, raw.find_first_of(" ") + 1);
 			}
 
-			if (type == "zombie") {
+			if (type == "swordman") {
 				Enemy* obj = new SwordMan(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y , width, height, 0, 0);
-				//this->enemies.push_back(obj);
+				this->enemies.push_back(obj);
+			}
+
+			if (type == "dog") {
+				Dog* obj = new Dog(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y, width, height, 0, 0);
+				this->enemies.push_back(obj);
+			}
+
+			if (type == "runner") {
+				Runner* obj = new Runner(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y, width, height, 0, 0);
+				this->enemies.push_back(obj);
+			}
+
+			if (type == "machinegunguy") {
+				MachineGunGuy* obj = new MachineGunGuy(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y, width, height, 0, 0);
+				this->enemies.push_back(obj);
+			}
+
+			if (type == "machinegunguysit") {
+				MachineGunGuySit* obj = new MachineGunGuySit(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y, width, height, 0, 0);
+				this->enemies.push_back(obj);
+			}
+
+			if (type == "birdbrown") {
+				BirdBrown* obj = new BirdBrown(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y, width, height, 0, 0);
+				this->enemies.push_back(obj);
+			}
+
+			if (type == "batbrown") {
+				BatBrown* obj = new BatBrown(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y, width, height, 0, 0);
+				this->enemies.push_back(obj);
+			}
+
+			if (type == "banshee") {
+				Banshee* obj = new Banshee(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y, width, height, 0, 0);
+				this->enemies.push_back(obj);
 			}
 		}
+	}
+
+	myfile.close();
+}
+
+void Map1::ReadQuadtree(char * _fileName)
+{
+	fstream myfile(_fileName, ios::in);
+	string line = "";
+
+	if (myfile.is_open()) {
+		list<Object*> objs;
+		getline(myfile, line);
+		QNode* temp = new QNode("1", 0, 0, 0, 0, 0, objs);
+		QParse* qparse = new NodeIdLevelParse(line, temp);
+		while (getline(myfile, line)) {
+			string raw = line;
+			switch (qparse->getParseType(raw))
+			{
+			case NODEID_LEVEL_PARSE:
+				this->quadtree.push_back(temp);
+				temp = new QNode("1", 0, 0, 0, 0, 0, objs);;
+				qparse = new NodeIdLevelParse(raw, temp);
+				break;
+			case OBJECT_GAME_PARSE:
+				qparse = new ObjectGameParse(raw, temp, d3ddv, camera);
+				break;
+			case REGION_PARSE:
+				qparse = new RegionParse(raw, temp);
+				break;
+			}
+		}
+
+		this->quadtree.push_back(temp);
 	}
 
 	myfile.close();

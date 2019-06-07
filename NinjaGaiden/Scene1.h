@@ -10,6 +10,14 @@
 #include"GameScene.h"
 #include"SwordMan.h"
 #include"BirdBrown.h"
+#include"Banshee.h"
+#include"BatBrown.h"
+#include"Dog.h"
+#include"MachineGunGuy.h"
+#include"ItemContainer4.h"
+#include"Runner.h"
+#include"MachineGunGuySit.h"
+#include"Bird.h"
 
 #include"PhysicalInteraction.h"
 #include<list>

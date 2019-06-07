@@ -1,0 +1,5 @@
+HP: 10
+Damage: 4
+Points: 500
+Attack/Skill: Axe Toss
+Location: Level 5

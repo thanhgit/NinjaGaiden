@@ -1,0 +1,4 @@
+Damage: 1
+Points: 7000
+Location: Level 5
+Sub-Weapon:

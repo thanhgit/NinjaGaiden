@@ -10,10 +10,31 @@
 #include"Ninja.h"
 #include"Static.h"
 #include"Enemy.h"
+#include"QNode.h"
+
+#include"SwordMan.h"
+#include"Dog.h"
+#include"Runner.h"
+#include"Bird.h"
+#include"MachineGunGuy.h"
+#include"MachineGunGuySit.h"
+#include"ItemContainer4.h"
+#include"BirdBrown.h"
+#include"BatBrown.h"
+#include"Banshee.h"
+
+#include"ItemContainer4.h"
+#include"Bird.h"
+
+#include"QParse.h"
+#include"NodeIdLevelParse.h"
+#include"ObjectGameParse.h"
+#include"RegionParse.h"
 
 #include<fstream>
 #include<sstream>
 #include<list>
+
 class Map
 {
 private:
@@ -28,6 +49,7 @@ public:
 	virtual void ReadRecs(char * _filename)=0;
 	virtual void ReadStatics(char * _filename)=0;
 	virtual void ReadEnemies(char * _fileName)=0;
+	virtual void ReadQuadtree(char * _fileName)=0;
 
 	list<Box*> GetRecs() {
 		return this->recs;
@@ -43,6 +65,10 @@ public:
 
 	list<Item*> GetItems() {
 		return this->items;
+	}
+
+	list<QNode*> GetQuadTree() {
+		return this->quadtree;
 	}
 protected:
 	int nTileCount;
@@ -64,6 +90,7 @@ protected:
 	list<Item*> items;
 
 	Collision* collition;
+	list<QNode*> quadtree;
 };
 
 #endif // !MAP_H

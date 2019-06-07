@@ -37,6 +37,7 @@ Ninja::Ninja(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, 
 	x_save = 0;
 
 	this->hurt = new Hurt(_lpD3ddv, camera, -100, -100, 8, 10, 0, 0 );
+	this->updateCamera = true;
 }
 
 Ninja::~Ninja()
@@ -45,8 +46,10 @@ Ninja::~Ninja()
 
 void Ninja::Update(DWORD _dt)
 {
+	this->hurt->GetBody()->SetX(this->body->GetX());
+	this->hurt->GetBody()->SetY(this->body->GetY());
 	// GRAVITY = 0.3F
-	UpdateWeapon(_dt);
+	//UpdateWeapon(_dt);
 	this->GetBody()->SetVelocityY(-0.3f *_dt);
 	float y = this->GetBody()->GetY() + this->GetBody()->GetVelocityY();
 	this->GetBody()->SetY(y);
@@ -79,13 +82,13 @@ void Ninja::Update(DWORD _dt)
 	else if (this->keyboard->KeyDown(DIK_K) && !IsActack()) {
 		if (IsLeft()) {
 			this->hurt->GetBody()->SetX(this->body->GetX());
-			this->hurt->GetBody()->SetY(56);
+			this->hurt->GetBody()->SetY(this->body->GetY()+this->body->GetHeight()/2);
 			this->hurt->AttackLeft();
 			this->control->changeState(new NinjaAttackLeft(this->graphics), this->GetBody());
 		}
 		else if (IsRight()) {
 			this->hurt->GetBody()->SetX(this->body->GetX());
-			this->hurt->GetBody()->SetY(56);
+			this->hurt->GetBody()->SetY(this->body->GetY()+this->body->GetHeight()/2);
 			this->hurt->AttackRight();
 			this->control->changeState(new NinjaAttackRight(this->graphics), this->GetBody());
 		}
@@ -414,6 +417,8 @@ bool Ninja::IsRight()
 
 void Ninja::UpdateCamera()
 {
+	if (!updateCamera) return;
+
 	int x_camera = this->body->GetX() - (this->camera->GetWidth() / 2);
 	int y_camera = this->camera->GetY();
 	int width_camera = this->camera->GetWidth();

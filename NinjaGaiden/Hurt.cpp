@@ -30,7 +30,7 @@ void Hurt::Update(DWORD _dt)
 	{
 		case 1:
 			this->GetBody()->SetVelocityX(-0.2);
-			x = this->GetBody()->GetX() + (-0.2) * (_dt);
+			x = this->GetBody()->GetX() + -5;
 			this->GetBody()->SetX(x);
 			index++;
 
@@ -41,7 +41,7 @@ void Hurt::Update(DWORD _dt)
 			break;
 		case 2:
 			this->GetBody()->SetVelocityX(0.2);
-			x = this->GetBody()->GetX() + (0.2) * (_dt);
+			x = this->GetBody()->GetX() + 5;
 			this->GetBody()->SetX(x);
 			index++;
 

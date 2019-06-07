@@ -1,9 +1,6 @@
 #include "Map2.h"
 #include"Utils.h"
 
-#include"Ninja.h"
-#include"SwordMan.h"
-
 Map2::Map2()
 {}
 
@@ -19,6 +16,7 @@ Map2::Map2(LPDIRECT3DDEVICE9 _d3ddv, Camera* camera, LPWSTR _spriteSheet, LPWSTR
 	ReadRecs("data/map2/maprecs.txt");
 	ReadStatics("data/map2/mapitems.txt");
 	ReadEnemies("data/map2/mapenemies.txt");
+	ReadQuadtree("data/map2/mapquadtree.txt");
 	this->imgmap = new Sprite(this->d3ddv, this->camera, L"data/map2/map.png", 80, 80, 16, 16, D3DCOLOR_XRGB(255, 255, 0));
 	this->map = (Sprite**)malloc(sizeof(Sprite *)*(Utils::VIEWPORT_WIDTH_COL*Utils::VIEWPORT_HEIGHT_COL));
 }
@@ -186,6 +184,40 @@ void Map2::ReadEnemies(char * _fileName)
 				this->enemies.push_back(obj);
 			}
 		}
+	}
+
+	myfile.close();
+}
+
+void Map2::ReadQuadtree(char * _fileName)
+{
+	fstream myfile(_fileName, ios::in);
+	string line = "";
+
+	if (myfile.is_open()) {
+		list<Object*> objs;
+		getline(myfile, line);
+		QNode* temp = new QNode("1", 0, 0, 0, 0, 0, objs);
+		QParse* qparse = new NodeIdLevelParse(line, temp);
+		while (getline(myfile, line)) {
+			string raw = line;
+			switch (qparse->getParseType(raw))
+			{
+			case NODEID_LEVEL_PARSE:
+				this->quadtree.push_back(temp);
+				temp = new QNode("1", 0, 0, 0, 0, 0, objs);;
+				qparse = new NodeIdLevelParse(raw, temp);
+				break;
+			case OBJECT_GAME_PARSE:
+				qparse = new ObjectGameParse(raw, temp, d3ddv, camera);
+				break;
+			case REGION_PARSE:
+				qparse = new RegionParse(raw, temp);
+				break;
+			}
+		}
+
+		this->quadtree.push_back(temp);
 	}
 
 	myfile.close();

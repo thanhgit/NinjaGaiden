@@ -76,9 +76,6 @@
     <Filter Include="Object\Enemy">
       <UniqueIdentifier>{d8adb20a-0c3c-45ca-b253-0c2f8c521b63}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Object\Boss">
-      <UniqueIdentifier>{a1dbada8-3449-4b9b-9d0a-9f667c75657a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Interaction">
       <UniqueIdentifier>{e141c48f-4f5d-4be5-8ed4-2d2c97d9151a}</UniqueIdentifier>
     </Filter>
@@ -171,6 +168,141 @@
     </Filter>
     <Filter Include="Interaction\NinjaWithEnemy">
       <UniqueIdentifier>{a4d8d1b5-681b-4638-bb74-0b3261be38f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Banshee">
+      <UniqueIdentifier>{3bf48dd5-7470-46b1-b345-09bf2365b0d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\BatBrown">
+      <UniqueIdentifier>{b0c895e4-2e14-405f-90c3-3de79f3bb598}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Dog">
+      <UniqueIdentifier>{6cac1920-e93d-4e53-bccc-3a97f27c0d82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\MachineGunGuy">
+      <UniqueIdentifier>{df64529e-1306-49cc-9f29-6d0635401303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Banshee\graphics">
+      <UniqueIdentifier>{e9c8a652-6d4e-4363-a3a9-5739d82a2adb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Banshee\state">
+      <UniqueIdentifier>{2d366671-010a-48a2-b1b8-c439f325a040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\BatBrown\graphics">
+      <UniqueIdentifier>{ccebf717-6ff9-4ffc-9062-bb3426c1a7ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\BatBrown\state">
+      <UniqueIdentifier>{1003f529-3dc6-4766-807a-ce5e8ed29ce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Dog\graphics">
+      <UniqueIdentifier>{7f3538ea-a442-43d3-ad25-247b9a8a3016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Dog\state">
+      <UniqueIdentifier>{39084d3f-f9b2-4b71-b691-79f4f5ebe24e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\MachineGunGuy\graphics">
+      <UniqueIdentifier>{8677eaf2-2b7a-4d7f-b7fc-eb6de9f910e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\MachineGunGuy\state">
+      <UniqueIdentifier>{d4ae6070-a68d-4a2b-b50d-b30d4290de6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Banshee\state\Run">
+      <UniqueIdentifier>{42ac9935-8e85-44fa-941c-944e8de5ba95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\BatBrown\state\Run">
+      <UniqueIdentifier>{9b0192c6-5e04-4c8d-8ce0-635ee74deb12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Dog\state\Run">
+      <UniqueIdentifier>{2292d286-b7ac-4c98-ac26-2a4f3f954faf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\MachineGunGuy\state\Run">
+      <UniqueIdentifier>{36eff8d9-0233-46ef-ba7b-9c4763f36f1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\MachineGunGuySit">
+      <UniqueIdentifier>{47dc5237-07ef-41e2-b929-43b3cb60e780}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Runner">
+      <UniqueIdentifier>{b6832ed4-6243-4ec0-9c7c-5894343d8e12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\MachineGunGuySit\graphics">
+      <UniqueIdentifier>{edb2f09a-83e8-4c4b-a800-7699c30eeffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\MachineGunGuySit\state">
+      <UniqueIdentifier>{d12401ef-6b1e-4309-bfcf-e55b5fc151e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Runner\graphics">
+      <UniqueIdentifier>{5dea6ee9-8f22-4493-9232-186179970d28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Runner\state">
+      <UniqueIdentifier>{1c2c7bd2-e2d3-4f91-b5c2-dcf29e927567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\Runner\state\Run">
+      <UniqueIdentifier>{efc29a7f-301a-4ff1-af88-3a4c87d9cedf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\MachineGunGuySit\state\Sit">
+      <UniqueIdentifier>{b8e59d75-29ec-447e-92fe-e235dc324025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Bird">
+      <UniqueIdentifier>{4eeca784-505c-424d-b502-9d8b080e9869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Bird\graphics">
+      <UniqueIdentifier>{795c316e-e793-4ced-adfc-006e3767050f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Bird\state">
+      <UniqueIdentifier>{108b22e5-2e61-45a2-b997-79bf4e48eacf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Bird\state\Fly">
+      <UniqueIdentifier>{9ab152f6-238a-4b44-a15b-1282e761683d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\ItemContainer4">
+      <UniqueIdentifier>{d70eada3-b0af-401c-b0a7-c337e62231f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\ItemContainer4\graphics">
+      <UniqueIdentifier>{f38361d9-2f71-42df-8848-53d3d2bdef06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\ItemContainer4\state">
+      <UniqueIdentifier>{eeadcefd-95ef-43be-a150-ef10bb3e8e44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\ItemContainer4\state\Run">
+      <UniqueIdentifier>{4a5ed55a-78d6-4a11-b06c-c6d224fdca66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Quadtree">
+      <UniqueIdentifier>{b4d791e8-f3f7-4a3e-a495-a9513a12d52e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Quadtree\QNode">
+      <UniqueIdentifier>{cc1c01b0-4b5a-4e64-aee2-65c719879131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Quadtree\QRegion">
+      <UniqueIdentifier>{0d6cd572-5396-4bf8-ad82-9afd91eec195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Quadtree\QParse">
+      <UniqueIdentifier>{e80eaff4-e81d-476b-9d36-fb5266ac07a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Quadtree\QParse\NodeIdLevelParse">
+      <UniqueIdentifier>{eab7651b-2032-4efa-83c0-e62ccceb9be2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Quadtree\QParse\ObjectGameParse">
+      <UniqueIdentifier>{8c84a76f-058e-4166-955e-0dad64a8bf5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Quadtree\QParse\RegionParse">
+      <UniqueIdentifier>{8a1c1e09-1d2f-4949-ac20-16a102abebdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Boss">
+      <UniqueIdentifier>{a8590fd7-c077-4868-bc59-8043f9263d73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Boss\Boss3">
+      <UniqueIdentifier>{a1dbada8-3449-4b9b-9d0a-9f667c75657a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Boss\Boss3\graphics">
+      <UniqueIdentifier>{66bf8671-bc10-49b5-8630-9408db2af9e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Boss\Boss3\state">
+      <UniqueIdentifier>{9ff3e2ef-1072-49c9-a474-95b87f8f5d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Boss\Boss3\state\Stand">
+      <UniqueIdentifier>{85a1d2dd-4f75-4753-a8f8-030ed0b31c51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Boss\Boss3\state\Jump">
+      <UniqueIdentifier>{988989ea-1317-4499-af3a-dce2498b8869}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -378,6 +510,192 @@
     <ClCompile Include="NinjaWithEnemy.cpp">
       <Filter>Interaction\NinjaWithEnemy</Filter>
     </ClCompile>
+    <ClCompile Include="MachineGunGuyState.cpp">
+      <Filter>Object\Enemy\MachineGunGuy</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemContainer4State.cpp">
+      <Filter>Object\Static\ItemContainer4</Filter>
+    </ClCompile>
+    <ClCompile Include="DogState.cpp">
+      <Filter>Object\Enemy\Dog</Filter>
+    </ClCompile>
+    <ClCompile Include="BatBrownState.cpp">
+      <Filter>Object\Enemy\BatBrown</Filter>
+    </ClCompile>
+    <ClCompile Include="BansheeState.cpp">
+      <Filter>Object\Enemy\Banshee</Filter>
+    </ClCompile>
+    <ClCompile Include="BansheeGraphics.cpp">
+      <Filter>Object\Enemy\Banshee\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Banshee.cpp">
+      <Filter>Object\Enemy\Banshee</Filter>
+    </ClCompile>
+    <ClCompile Include="BansheeControl.cpp">
+      <Filter>Object\Enemy\Banshee</Filter>
+    </ClCompile>
+    <ClCompile Include="BansheeRunLeft.cpp">
+      <Filter>Object\Enemy\Banshee\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="BansheeRunRight.cpp">
+      <Filter>Object\Enemy\Banshee\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="BatBrownControl.cpp">
+      <Filter>Object\Enemy\BatBrown</Filter>
+    </ClCompile>
+    <ClCompile Include="BatBrown.cpp">
+      <Filter>Object\Enemy\BatBrown</Filter>
+    </ClCompile>
+    <ClCompile Include="BatBrownGraphics.cpp">
+      <Filter>Object\Enemy\BatBrown\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="BatBrownRunLeft.cpp">
+      <Filter>Object\Enemy\BatBrown\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="BatBrownRunRight.cpp">
+      <Filter>Object\Enemy\BatBrown\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="DogGraphics.cpp">
+      <Filter>Object\Enemy\Dog\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="DogRunLeft.cpp">
+      <Filter>Object\Enemy\Dog\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="DogRunRight.cpp">
+      <Filter>Object\Enemy\Dog\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="Dog.cpp">
+      <Filter>Object\Enemy\Dog</Filter>
+    </ClCompile>
+    <ClCompile Include="DogControl.cpp">
+      <Filter>Object\Enemy\Dog</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuyGraphics.cpp">
+      <Filter>Object\Enemy\MachineGunGuy\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuyRunLeft.cpp">
+      <Filter>Object\Enemy\MachineGunGuy\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuyRunRight.cpp">
+      <Filter>Object\Enemy\MachineGunGuy\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuy.cpp">
+      <Filter>Object\Enemy\MachineGunGuy</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuyControl.cpp">
+      <Filter>Object\Enemy\MachineGunGuy</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemContainer4Graphics.cpp">
+      <Filter>Object\Static\ItemContainer4\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemContainer4RunLeft.cpp">
+      <Filter>Object\Static\ItemContainer4\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemContainer4RunRight.cpp">
+      <Filter>Object\Static\ItemContainer4\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemContainer4.cpp">
+      <Filter>Object\Static\ItemContainer4</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemContainer4Control.cpp">
+      <Filter>Object\Static\ItemContainer4</Filter>
+    </ClCompile>
+    <ClCompile Include="RunnerGraphics.cpp">
+      <Filter>Object\Enemy\Runner\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="RunnerRunLeft.cpp">
+      <Filter>Object\Enemy\Runner\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="RunnerRunRight.cpp">
+      <Filter>Object\Enemy\Runner\state\Run</Filter>
+    </ClCompile>
+    <ClCompile Include="Runner.cpp">
+      <Filter>Object\Enemy\Runner</Filter>
+    </ClCompile>
+    <ClCompile Include="RunnerControl.cpp">
+      <Filter>Object\Enemy\Runner</Filter>
+    </ClCompile>
+    <ClCompile Include="RunnerState.cpp">
+      <Filter>Object\Enemy\Runner</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuySit.cpp">
+      <Filter>Object\Enemy\MachineGunGuySit</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuySitState.cpp">
+      <Filter>Object\Enemy\MachineGunGuySit</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuySitControl.cpp">
+      <Filter>Object\Enemy\MachineGunGuySit</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuySitGraphics.cpp">
+      <Filter>Object\Enemy\MachineGunGuySit\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuySitSitLeft.cpp">
+      <Filter>Object\Enemy\MachineGunGuySit\state\Sit</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunGuySitSitRight.cpp">
+      <Filter>Object\Enemy\MachineGunGuySit\state\Sit</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdGraphics.cpp">
+      <Filter>Object\Static\Bird\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdFlyLeft.cpp">
+      <Filter>Object\Static\Bird\state\Fly</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdFlyRight.cpp">
+      <Filter>Object\Static\Bird\state\Fly</Filter>
+    </ClCompile>
+    <ClCompile Include="Bird.cpp">
+      <Filter>Object\Static\Bird</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdControl.cpp">
+      <Filter>Object\Static\Bird</Filter>
+    </ClCompile>
+    <ClCompile Include="BirdState.cpp">
+      <Filter>Object\Static\Bird</Filter>
+    </ClCompile>
+    <ClCompile Include="QRegion.cpp">
+      <Filter>Engine\Quadtree\QRegion</Filter>
+    </ClCompile>
+    <ClCompile Include="QNode.cpp">
+      <Filter>Engine\Quadtree\QNode</Filter>
+    </ClCompile>
+    <ClCompile Include="QParse.cpp">
+      <Filter>Engine\Quadtree\QParse</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeIdLevelParse.cpp">
+      <Filter>Engine\Quadtree\QParse\NodeIdLevelParse</Filter>
+    </ClCompile>
+    <ClCompile Include="RegionParse.cpp">
+      <Filter>Engine\Quadtree\QParse\RegionParse</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectGameParse.cpp">
+      <Filter>Engine\Quadtree\QParse\ObjectGameParse</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss3Graphics.cpp">
+      <Filter>Object\Boss\Boss3\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss3State.cpp">
+      <Filter>Object\Boss\Boss3</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss3Control.cpp">
+      <Filter>Object\Boss\Boss3</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss3.cpp">
+      <Filter>Object\Boss\Boss3</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss3StandLeft.cpp">
+      <Filter>Object\Boss\Boss3\state\Stand</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss3StandRight.cpp">
+      <Filter>Object\Boss\Boss3\state\Stand</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss3JumpLeft.cpp">
+      <Filter>Object\Boss\Boss3\state\Jump</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss3JumpRight.cpp">
+      <Filter>Object\Boss\Boss3\state\Jump</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -577,6 +895,192 @@
     </ClInclude>
     <ClInclude Include="NinjaWithEnemy.h">
       <Filter>Interaction\NinjaWithEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BansheeState.h">
+      <Filter>Object\Enemy\Banshee</Filter>
+    </ClInclude>
+    <ClInclude Include="BatBrownState.h">
+      <Filter>Object\Enemy\BatBrown</Filter>
+    </ClInclude>
+    <ClInclude Include="DogState.h">
+      <Filter>Object\Enemy\Dog</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemContainer4State.h">
+      <Filter>Object\Static\ItemContainer4</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuyState.h">
+      <Filter>Object\Enemy\MachineGunGuy</Filter>
+    </ClInclude>
+    <ClInclude Include="BansheeControl.h">
+      <Filter>Object\Enemy\Banshee</Filter>
+    </ClInclude>
+    <ClInclude Include="Banshee.h">
+      <Filter>Object\Enemy\Banshee</Filter>
+    </ClInclude>
+    <ClInclude Include="BansheeGraphics.h">
+      <Filter>Object\Enemy\Banshee\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="BansheeRunLeft.h">
+      <Filter>Object\Enemy\Banshee\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="BansheeRunRight.h">
+      <Filter>Object\Enemy\Banshee\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="BatBrownGraphics.h">
+      <Filter>Object\Enemy\BatBrown\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="BatBrownRunLeft.h">
+      <Filter>Object\Enemy\BatBrown\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="BatBrownRunRight.h">
+      <Filter>Object\Enemy\BatBrown\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="BatBrownControl.h">
+      <Filter>Object\Enemy\BatBrown</Filter>
+    </ClInclude>
+    <ClInclude Include="BatBrown.h">
+      <Filter>Object\Enemy\BatBrown</Filter>
+    </ClInclude>
+    <ClInclude Include="DogGraphics.h">
+      <Filter>Object\Enemy\Dog\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Dog.h">
+      <Filter>Object\Enemy\Dog</Filter>
+    </ClInclude>
+    <ClInclude Include="DogControl.h">
+      <Filter>Object\Enemy\Dog</Filter>
+    </ClInclude>
+    <ClInclude Include="DogRunLeft.h">
+      <Filter>Object\Enemy\Dog\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="DogRunRight.h">
+      <Filter>Object\Enemy\Dog\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuyRunLeft.h">
+      <Filter>Object\Enemy\MachineGunGuy\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuyRunRight.h">
+      <Filter>Object\Enemy\MachineGunGuy\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuy.h">
+      <Filter>Object\Enemy\MachineGunGuy</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuyGraphics.h">
+      <Filter>Object\Enemy\MachineGunGuy\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuyControl.h">
+      <Filter>Object\Enemy\MachineGunGuy</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemContainer4Graphics.h">
+      <Filter>Object\Static\ItemContainer4\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemContainer4RunLeft.h">
+      <Filter>Object\Static\ItemContainer4\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemContainer4RunRight.h">
+      <Filter>Object\Static\ItemContainer4\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemContainer4.h">
+      <Filter>Object\Static\ItemContainer4</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemContainer4Control.h">
+      <Filter>Object\Static\ItemContainer4</Filter>
+    </ClInclude>
+    <ClInclude Include="Runner.h">
+      <Filter>Object\Enemy\Runner</Filter>
+    </ClInclude>
+    <ClInclude Include="RunnerState.h">
+      <Filter>Object\Enemy\Runner</Filter>
+    </ClInclude>
+    <ClInclude Include="RunnerControl.h">
+      <Filter>Object\Enemy\Runner</Filter>
+    </ClInclude>
+    <ClInclude Include="RunnerGraphics.h">
+      <Filter>Object\Enemy\Runner\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="RunnerRunLeft.h">
+      <Filter>Object\Enemy\Runner\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="RunnerRunRight.h">
+      <Filter>Object\Enemy\Runner\state\Run</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuySit.h">
+      <Filter>Object\Enemy\MachineGunGuySit</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuySitState.h">
+      <Filter>Object\Enemy\MachineGunGuySit</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuySitControl.h">
+      <Filter>Object\Enemy\MachineGunGuySit</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuySitGraphics.h">
+      <Filter>Object\Enemy\MachineGunGuySit\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuySitSitLeft.h">
+      <Filter>Object\Enemy\MachineGunGuySit\state\Sit</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunGuySitSitRight.h">
+      <Filter>Object\Enemy\MachineGunGuySit\state\Sit</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdGraphics.h">
+      <Filter>Object\Static\Bird\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdFlyLeft.h">
+      <Filter>Object\Static\Bird\state\Fly</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdFlyRight.h">
+      <Filter>Object\Static\Bird\state\Fly</Filter>
+    </ClInclude>
+    <ClInclude Include="Bird.h">
+      <Filter>Object\Static\Bird</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdControl.h">
+      <Filter>Object\Static\Bird</Filter>
+    </ClInclude>
+    <ClInclude Include="BirdState.h">
+      <Filter>Object\Static\Bird</Filter>
+    </ClInclude>
+    <ClInclude Include="QRegion.h">
+      <Filter>Engine\Quadtree\QRegion</Filter>
+    </ClInclude>
+    <ClInclude Include="QNode.h">
+      <Filter>Engine\Quadtree\QNode</Filter>
+    </ClInclude>
+    <ClInclude Include="QParse.h">
+      <Filter>Engine\Quadtree\QParse</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeIdLevelParse.h">
+      <Filter>Engine\Quadtree\QParse\NodeIdLevelParse</Filter>
+    </ClInclude>
+    <ClInclude Include="RegionParse.h">
+      <Filter>Engine\Quadtree\QParse\RegionParse</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectGameParse.h">
+      <Filter>Engine\Quadtree\QParse\ObjectGameParse</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss3State.h">
+      <Filter>Object\Boss\Boss3</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss3Control.h">
+      <Filter>Object\Boss\Boss3</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss3.h">
+      <Filter>Object\Boss\Boss3</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss3Graphics.h">
+      <Filter>Object\Boss\Boss3\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss3StandLeft.h">
+      <Filter>Object\Boss\Boss3\state\Stand</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss3StandRight.h">
+      <Filter>Object\Boss\Boss3\state\Stand</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss3JumpLeft.h">
+      <Filter>Object\Boss\Boss3\state\Jump</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss3JumpRight.h">
+      <Filter>Object\Boss\Boss3\state\Jump</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

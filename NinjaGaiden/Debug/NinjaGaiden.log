@@ -1,7 +1,40 @@
-﻿  SwordMan.cpp
+﻿  BansheeControl.cpp
+  Generating Code...
+  Compiling...
+  Banshee.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\swordman.cpp(29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\swordman.cpp(34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\administrator\desktop\ninjagaiden\ninjagaiden\swordman.cpp(37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  main.cpp
+  SwordMan.cpp
+  SplashScene.cpp
+  SceneManager.cpp
+  Scene3.cpp
+  Scene2.cpp
+  Scene1.cpp
+  Runner.cpp
+  RegionParse.cpp
+  QParse.cpp
+  PhisicalInteraction.cpp
+  ObjectWithMap.cpp
+  ObjectGameParse.cpp
+  NodeIdLevelParse.cpp
+  NinjaWithEnemy.cpp
+  Map3.cpp
+  Map2.cpp
+  Map1.cpp
+  Map.cpp
+  MachineGunGuySit.cpp
+  MachineGunGuy.cpp
+  ItemContainer4.cpp
+  Interaction.cpp
+  GameScene.cpp
+  Game.cpp
+  Enemy.cpp
+  Dog.cpp
+  Boss3.cpp
+  BirdBrown.cpp
+  Bird.cpp
+  BatBrown.cpp
   NinjaGaiden.vcxproj -> C:\Users\Administrator\Desktop\NinjaGaiden\Debug\NinjaGaiden.exe
   NinjaGaiden.vcxproj -> C:\Users\Administrator\Desktop\NinjaGaiden\Debug\NinjaGaiden.pdb (Full PDB)

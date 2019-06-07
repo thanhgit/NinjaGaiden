@@ -1,0 +1,87 @@
+1111 3
+0 0 384 384
+273 95 25 41 enemy swordman
+337 81 17 16 item bird 
+11121 4
+384 0 192 192
+384 96 25 41 enemy swordman
+512 71 33 30 enemy machinegunguysit
+432 57 17 16 item bird 
+11122 4
+576 0 192 192
+624 39 33 30 enemy machinegunguysit
+704 33 17 16 item bird 
+11211 4
+768 0 192 192
+865 95 25 41 enemy swordman
+906 38 17 25 enemy birdbrown
+11212 4
+960 0 192 192
+1055 129 25 43 enemy banshee
+1004 39 17 16 item bird 
+112211 5
+1152 0 96 96
+1152 30 25 43 enemy banshee
+112213 5
+1152 96 96 96
+1159 127 25 41 enemy swordman
+1223 128 25 41 enemy swordman
+1155 116 17 16 item bird 
+112221 5
+1344 0 96 96
+1439 47 17 25 enemy birdbrown
+1392 58 17 16 item bird 
+112222 5
+1440 0 96 96
+1471 27 17 25 enemy birdbrown
+1501 59 17 16 item bird 
+112224 5
+1440 96 96 96
+1439 47 17 25 enemy birdbrown
+1392 58 17 16 item bird 
+121111 5
+1536 0 96 96
+1567 65 17 33 enemy runner
+1616 31 17 33 enemy runner
+121112 5
+1632 0 96 96
+1649 31 17 33 enemy runner
+121114 5
+1632 96 96 96
+1567 65 17 33 enemy runner
+1616 31 17 33 enemy runner
+12112 4
+1728 0 192 192
+1903 31 25 41 enemy swordman
+1814 125 17 16 item bird 
+12121 4
+1920 0 192 192
+2086 103 33 30 enemy machinegunguysit
+2078 74 17 16 item bird 
+12122 4
+2112 0 192 192
+2279 134 33 30 enemy machinegunguysit
+2185 53 17 16 item bird 
+12211 4
+2304 0 192 192
+2441 134 33 30 enemy machinegunguysit
+2413 34 17 25 enemy birdbrown
+2367 82 17 16 item bird 
+122121 5
+2496 0 96 96
+2496 81 17 16 item bird 
+122122 5
+2592 0 96 96
+2672 36 17 25 enemy birdbrown
+2615 74 17 16 item bird 
+122124 5
+2592 96 96 96
+2496 81 17 16 item bird 
+12221 4
+2688 0 192 192
+2724 80 32 17 enemy dog
+2850 49 17 16 item bird 
+12222 4
+2880 0 192 192
+2959 127 25 41 enemy swordman
+2998 39 17 25 enemy birdbrown

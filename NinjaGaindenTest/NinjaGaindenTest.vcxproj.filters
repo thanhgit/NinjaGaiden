@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Box.cpp">
+      <Filter>Dependences</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Dependences</Filter>
+    </ClCompile>
+    <ClCompile Include="QNode.cpp">
+      <Filter>Dependences</Filter>
+    </ClCompile>
+    <ClCompile Include="QRegion.cpp">
+      <Filter>Dependences</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Dependences">
+      <UniqueIdentifier>{dd6999cc-dc15-4393-89eb-3d1ecc3027e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Box.h">
+      <Filter>Dependences</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Dependences</Filter>
+    </ClInclude>
+    <ClInclude Include="QNode.h">
+      <Filter>Dependences</Filter>
+    </ClInclude>
+    <ClInclude Include="QRegion.h">
+      <Filter>Dependences</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Dependences</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

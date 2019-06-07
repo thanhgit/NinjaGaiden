@@ -18,6 +18,7 @@ GameScene::~GameScene()
 {
 
 }
+
 void GameScene::InitScene()
 {
 	this->background = new Sprite(GetDevice(), new Camera(0, 422), L"data/Resources/blackboard.png", 1, 1, 260, 40);
@@ -78,22 +79,6 @@ void GameScene::UpdateScene(DWORD delta)
 
 void GameScene::ProcessInput()
 {
-	if (GetKeyboard()->KeyDown(DIK_1)) {
-		Scene* scene = new Scene1(GetDevice(), GetCamera(), this->hWnd);
-		scene->InitScene();
-		SceneManager::Instance()->add(scene);
-	}
-	else if (GetKeyboard()->KeyDown(DIK_2)) {
-		Scene* scene = new Scene2(GetDevice(), GetCamera(), this->hWnd);
-		scene->InitScene();
-		SceneManager::Instance()->add(scene);
-	}
-	else if (GetKeyboard()->KeyDown(DIK_3)) {
-		Scene* scene = new Scene3(GetDevice(), GetCamera(), this->hWnd);
-		scene->InitScene();
-		SceneManager::Instance()->add(scene);
-	}
-
 	this->processInput();
 }
 

@@ -3,6 +3,8 @@
 #include"Camera.h"
 #include"Keyboard.h"
 #include"Audio.h"
+#include"QNode.h"
+#include<list>
 #include<d3d9.h>
 class Scene
 {
@@ -18,6 +20,13 @@ public:
 	Camera* GetCamera();
 	Keyboard* GetKeyboard();
 	Audio* GetAudio();
+	HWND GetHWND() {
+		return this->hWnd;
+	}
+
+	void SetKeyboard(Keyboard* keyboard) {
+		this->keyboard = keyboard;
+	}
 protected:
 	LPDIRECT3DDEVICE9 d3ddv;
 	Camera* camera;
@@ -25,6 +34,7 @@ protected:
 
 	HWND hWnd;
 	Audio* audio;
+	list<QNode*> quadtree;
 };
 
 

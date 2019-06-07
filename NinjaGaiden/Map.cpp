@@ -4,7 +4,9 @@
 #include"Ninja.h"
 
 Map::Map()
-{}
+{
+	
+}
 
 Map::~Map()
 {
@@ -19,9 +21,14 @@ Map::~Map()
 
 Map::Map(LPDIRECT3DDEVICE9 _d3ddv, Camera* camera, LPWSTR _spriteSheet, LPWSTR _spriteSheet2, char* _fileName)
 {
+	this->map = nullptr;
+	this->recs.clear();
+	this->items.clear();
+	this->quadtree.clear();
+	this->enemies.clear();
+
 	this->camera = camera;
 	this->d3ddv = _d3ddv;
-	
 }
 
 void Map::Update(DWORD delta)

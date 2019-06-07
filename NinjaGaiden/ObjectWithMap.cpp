@@ -69,7 +69,7 @@ void ObjectWithMap::EnemiesInteractMap()
 				(*obj)->GetBody()->SetX(x);
 				if (DependTypeEnemy(*obj)) {
 					Enemy* enemy = (Enemy*)*obj;
-					//enemy->changeDirection();
+					enemy->GetBody()->SetVelocityX(-enemy->GetBody()->GetVelocityX());
 				}
 			}
 			else if (collition->GetDirection() == RIGHT) {
@@ -79,7 +79,8 @@ void ObjectWithMap::EnemiesInteractMap()
 				(*obj)->GetBody()->SetX(x);
 				if (DependTypeEnemy(*obj)) {
 					Enemy* enemy = (Enemy*)*obj;
-					//enemy->changeDirection();
+					enemy->GetBody()->SetVelocityX(-enemy->GetBody()->GetVelocityX());
+
 				}
 			}
 		}

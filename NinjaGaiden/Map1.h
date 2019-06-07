@@ -15,6 +15,7 @@ public:
 	virtual void ReadRecs(char * _filename);
 	virtual void ReadStatics(char * _filename);
 	virtual void ReadEnemies(char * _fileName);
+	virtual void ReadQuadtree(char * _fileName);
 };
 
 #endif // !MAP_H

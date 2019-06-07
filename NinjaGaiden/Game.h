@@ -17,6 +17,7 @@ class Game :public MyWindows
 public:
 	Game(HINSTANCE _hInstace, LPTSTR _lpName, int _nCmdShow, int _nWidthScreen, int _nHeightScreen, int _nRate);
 	~Game();
+
 	void InitInput();
 	void InitSprite();
 	void InitSound();
@@ -27,6 +28,7 @@ public:
 
 	void ProcessInput();
 private:
+	Keyboard* keyboard;
 };
 
 

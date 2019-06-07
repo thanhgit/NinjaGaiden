@@ -136,12 +136,17 @@ public:
 		return this->hurt;
 	}
 
+	void setUpdateCamera(bool updateCamera) {
+		this->updateCamera = updateCamera;
+	}
+
 public:
 	///////// simon 
 	int m_heart;
 	int m_score;
 	int m_life;
 	int m_point;
+	bool updateCamera;
 
 	float x_save;
 	float y_save;

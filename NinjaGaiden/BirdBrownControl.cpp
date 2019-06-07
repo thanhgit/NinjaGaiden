@@ -41,7 +41,7 @@ void BirdBrownControl::changeState(BirdBrownState * _state, Box* _birdBrown)
 		}
 		else {
 			this->indexRun++;
-			Sleep(10);
+			Sleep(Utils::ANIMATE_TIME);
 		}
 	}
 

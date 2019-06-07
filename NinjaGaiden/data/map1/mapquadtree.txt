@@ -1,0 +1,43 @@
+1111 3
+0 0 256 256
+240 128 25 41 enemy swordman
+215 144 32 17 enemy dog
+1112 3
+256 0 256 256
+289 130 25 41 enemy swordman
+337 128 25 41 enemy swordman
+433 128 25 41 enemy swordman
+1121 3
+512 0 256 256
+556 62 17 25 enemy birdbrown
+715 65 17 25 enemy birdbrown
+623 134 17 14 enemy batbrown
+1122 3
+768 0 256 256
+799 93 25 43 enemy banshee
+902 84 32 17 enemy dog
+905 87 32 17 enemy dog
+1211 3
+1024 0 256 256
+1054 56 17 25 enemy birdbrown
+1217 65 25 43 enemy banshee
+1273 150 32 17 enemy dog
+12121 4
+1280 0 128 128
+1280 64 25 41 enemy swordman
+12122 4
+1408 0 128 128
+1440 63 25 41 enemy swordman
+1472 30 25 41 enemy swordman
+12123 4
+1280 128 128 128
+1365 137 25 33 enemy machinegunguy
+1221 3
+1536 0 256 256
+1566 69 17 25 enemy birdbrown
+1724 42 17 25 enemy birdbrown
+1222 3
+1792 0 256 256
+1887 128 25 41 enemy swordman
+1950 128 25 41 enemy swordman
+1868 45 17 25 enemy birdbrown

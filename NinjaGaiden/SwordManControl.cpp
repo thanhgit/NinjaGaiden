@@ -42,7 +42,7 @@ void SwordManControl::changeState(SwordManState * _state, Box* _swordMan)
 		}
 		else {
 			this->indexRun++;
-			Sleep(80);
+			Sleep(Utils::ANIMATE_TIME);
 		}
 	}
 

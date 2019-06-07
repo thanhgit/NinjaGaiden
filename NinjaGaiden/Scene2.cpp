@@ -1,4 +1,7 @@
 #include"Scene2.h"
+#include"Scene3.h"
+#include"Scene1.h"
+#include"SceneManager.h"
 #include"Static.h"
 #include"Item.h"
 #include"Map2.h"
@@ -29,27 +32,60 @@ void Scene2::init()
 	// player
 	this->ninja = new Ninja(GetDevice(), GetCamera(), 30, 200, 16, 32, 0, 0);
 	this->ninja->SetKeyboard(this->GetKeyboard());
+	this->ninja->setUpdateCamera(true);
 	this->SetPlayer(this->ninja);
 
 	this->physics = new PhysicalInteraction(this->ninja);
+	this->physics->SetEnemies(enemies);
+	this->quadtree = this->map->GetQuadTree();
+
 	list<Object*> listObj;
 	physics->SetRecs(this->recs);
 
-	stage = 1;
+	this->stage = 2;
 }
 
-void Scene2::update(DWORD delta)
+void Scene2::update(DWORD _dt)
 {
-	map->Update(delta);
+	map->Update(_dt);
 	this->physics->update();
 
-	this->ninja->Update(delta);
+	this->ninja->Update(_dt);
+
+	for (auto node : this->quadtree) {
+		if (node->getRegion()->getObjs().size() == 0) {
+			continue;
+		}
+		else if (node->containCamera(camera->GetX(), camera->GetY(), camera->GetWidth(), camera->GetHeight())) {
+			for (auto obj : node->getRegion()->getObjs()) {
+				Enemy* enemy = (Enemy*)obj;
+				this->enemies.push_back(enemy);
+			}
+
+			node->getRegion()->clearObjects();
+
+			this->physics->SetEnemies(this->enemies);
+			//this->quadtree.remove(node);
+		}
+	}
+
+	std::list<Enemy*>::iterator enemy;
+
+	for (enemy = this->enemies.begin(); enemy != this->enemies.end(); enemy++) {
+
+		if ((*enemy)->GetBody()->GetY() > 300) {
+			this->enemies.remove(*enemy);
+		}
+		else {
+			(*enemy)->Update(_dt);
+		}
+
+	}
 }
 
 void Scene2::processInput()
 {
-
-
+	
 }
 
 void Scene2::exit()

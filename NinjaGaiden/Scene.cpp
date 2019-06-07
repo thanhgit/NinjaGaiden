@@ -6,7 +6,6 @@ Scene::Scene(LPDIRECT3DDEVICE9 _lpD3dDv, Camera * _camera, HWND _hWnd)
 	this->d3ddv = _lpD3dDv;
 	this->camera = _camera;
 	this->hWnd = _hWnd;
-	this->keyboard = new Keyboard();
 	this->audio = new Audio();
 }
 

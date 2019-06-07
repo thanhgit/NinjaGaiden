@@ -53,14 +53,15 @@ void NinjaControl::changeState(NinjaState * _state, Box* _ninja)
 		if (this->indexRun > 3) {
 			this->indexRun = 0;
 			if (SameType(new NinjaRunLeft())) {
-				this->state = new NinjaStandLeft(this->graphics);
+				this->state = new NinjaRunLeft(this->graphics);
 			}
 			else {
-				this->state = new NinjaStandRight(this->graphics);
+				this->state = new NinjaRunRight(this->graphics);
 			}
 		}
 		else {
 			this->indexRun++;
+			Sleep(Utils::NINJA_ANIMATE_TIME);
 		}
 	}
 	else if (SameType(new NinjaAttackLeft()) || SameType(new NinjaAttackRight())) {
@@ -79,7 +80,7 @@ void NinjaControl::changeState(NinjaState * _state, Box* _ninja)
 		}
 		else {
 			this->indexActack++;
-			Sleep(80);
+			Sleep(Utils::NINJA_ANIMATE_TIME);
 		}
 	}
 	else if (SameType(new JumpVerticalLeft()) || SameType(new JumpVerticalRight())) {
@@ -95,7 +96,7 @@ void NinjaControl::changeState(NinjaState * _state, Box* _ninja)
 		}
 		else {
 			this->indexJumpVertical++;
-			Sleep(80);
+			Sleep(Utils::NINJA_ANIMATE_TIME);
 		}
 	}
 	else if (SameType(new JumpParabolLeft()) || SameType(new JumpParabolRight())) {
@@ -111,7 +112,7 @@ void NinjaControl::changeState(NinjaState * _state, Box* _ninja)
 		}
 		else {
 			this->indexJumpParabol++;
-			Sleep(80);
+			Sleep(Utils::NINJA_ANIMATE_TIME);
 		}
 	}
 
