@@ -2,13 +2,13 @@
 #define BOSS3_H
 #include"Sprite.h"
 #include"Keyboard.h"
-#include"Enemy.h"
+#include"Boss.h"
 #include"Boss3Control.h"
 #include"Boss3Graphics.h"
 
 #include<typeinfo.h>
 
-class Boss3 : public Enemy
+class Boss3 : public Boss
 {
 public:
 	Boss3(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, int _nWidth, int _nHeight, float _fVelocityX, float _fVelocityY);
@@ -17,13 +17,16 @@ public:
 	void ai(Box* box);
 	void Dead();
 
+	BossState* getState();
+	void setState(BossState* _state);
+
 	// stand
 	void ActionStandLeft();
 	void ActionStandRight();
 
 	// jump
-	void ActionJumpLeft();
-	void ActionJumpRight();
+	void ActionJumpLeft(DWORD _dt);
+	void ActionJumpRight(DWORD _dt);
 
 	bool IsJump();
 	bool IsJumpLeft();
@@ -35,7 +38,7 @@ public:
 private:
 	Boss3Control * control;
 	Boss3Graphics* graphics;
-	Box* body;
+	Box* obj;
 };
 
 #endif

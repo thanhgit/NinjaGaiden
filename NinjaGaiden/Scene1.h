@@ -2,11 +2,7 @@
 #define SCENE1_H
 #include"Scene.h"
 #include"Map.h"
-#include"Log.h""
 #include"Object.h"
-
-#include"Ninja.h""
-
 #include"GameScene.h"
 #include"SwordMan.h"
 #include"BirdBrown.h"
@@ -32,7 +28,6 @@ public:
 	void processInput();
 	void exit();
 private:
-	int stage;
 	PhysicalInteraction* physics;
 	list<Box*> recs;
 

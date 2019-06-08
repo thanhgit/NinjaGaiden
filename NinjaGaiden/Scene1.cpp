@@ -30,7 +30,7 @@ void Scene1::init()
 	this->recs = map->GetRecs();
 
 	// player
-	this->ninja = new Ninja(GetDevice(), GetCamera(), 50, 70, 16, 32, 0, 0);
+	this->ninja = new Ninja(GetDevice(), GetCamera(), 50, 55, 16, 32, 0, 0);
 	this->ninja->SetKeyboard(this->GetKeyboard());
 	this->ninja->setUpdateCamera(true);
 	this->SetPlayer(this->ninja);
@@ -44,11 +44,26 @@ void Scene1::init()
 	list<Object*> listObj;
 	physics->SetRecs(this->recs);
 
-	this->stage = 1;
+	this->m_stage = 1;
+	this->m_time = 150;
 }
 
 void Scene1::update(DWORD _dt)
 {
+	if (this->ninja->GetBody()->GetX() > 2048 - this->camera->GetWidth()/2) {
+		this->ninja->setUpdateCamera(false);
+	}
+	else {
+		this->ninja->setUpdateCamera(true);
+	}
+
+	if (this->ninja->GetBody()->GetX() > 2048) {
+		Scene* scene = new Scene2(GetDevice(), GetCamera(), GetHWND());
+		scene->SetKeyboard(this->keyboard);
+		scene->InitScene();
+		SceneManager::Instance()->add(scene);
+	}
+
 	map->Update(_dt);
 	this->physics->update();
 
@@ -65,9 +80,16 @@ void Scene1::update(DWORD _dt)
 			}
 
 			node->getRegion()->clearObjects();
+			list<Enemy*> _enemies;
+			for (auto obj : this->enemies) {
+				if (this->ninja->GetBody()->GetX() - obj->GetBody()->GetX() < 150) {
+					_enemies.push_back(obj);
+				}
+			}
+
+			this->enemies = _enemies;
 
 			this->physics->SetEnemies(this->enemies);
-			//this->quadtree.remove(node);
 		}
 	}
 
@@ -83,10 +105,6 @@ void Scene1::update(DWORD _dt)
 		}
 		
 	}
-}
-
-void loadEnemy() {
-
 }
 
 void Scene1::processInput()

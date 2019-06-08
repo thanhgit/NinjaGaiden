@@ -55,7 +55,23 @@ void Dog::ai(Box* box)
 
 void Dog::Dead()
 {
-	this->SetActive(false);
 	this->GetBody()->SetX(-100);
 	this->GetBody()->SetY(-100);
+}
+
+EnemyState * Dog::getState()
+{
+	return this->control->getState();
+}
+
+void Dog::setState(EnemyState * _state)
+{
+	if (typeid(*_state) == typeid(DogRunLeft)) {
+		this->control->changeState(new DogRunLeft(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(-Utils::SPEED_X);
+	}
+	else if (typeid(*_state) == typeid(DogRunRight)) {
+		this->control->changeState(new DogRunRight(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(Utils::SPEED_X);
+	}
 }

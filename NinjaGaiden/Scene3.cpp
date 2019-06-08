@@ -27,7 +27,7 @@ void Scene3::init()
 	this->recs = map->GetRecs();
 
 	// player
-	this->ninja = new Ninja(GetDevice(), GetCamera(), 30, 200, 16, 32, 0, 0);
+	this->ninja = new Ninja(GetDevice(), GetCamera(), 30, 50, 16, 32, 0, 0);
 	this->ninja->SetKeyboard(this->GetKeyboard());
 	this->ninja->setUpdateCamera(false);
 	this->SetPlayer(this->ninja);
@@ -36,10 +36,26 @@ void Scene3::init()
 	this->physics->SetEnemies(enemies);
 	this->quadtree = this->map->GetQuadTree();
 
-	list<Object*> listObj;
+	for (auto node : this->quadtree) {
+		if (node->getRegion()->getObjs().size() == 0) {
+			continue;
+		}
+		else if (node->containCamera(camera->GetX(), camera->GetY(), camera->GetWidth(), camera->GetHeight())) {
+			for (auto obj : node->getRegion()->getObjs()) {
+				Boss* boss = (Boss*)obj;
+				this->bosses.push_back(boss);
+			}
+
+			node->getRegion()->clearObjects();
+
+			this->physics->SetBosses(this->bosses);
+		}
+	}
+
 	physics->SetRecs(this->recs);
 
-	this->stage = 3;
+	this->m_stage = 3;
+	this->m_time = 150;
 }
 
 void Scene3::update(DWORD _dt)
@@ -49,34 +65,8 @@ void Scene3::update(DWORD _dt)
 
 	this->ninja->Update(_dt);
 
-	for (auto node : this->quadtree) {
-		if (node->getRegion()->getObjs().size() == 0) {
-			continue;
-		}
-		else if (node->containCamera(camera->GetX(), camera->GetY(), camera->GetWidth(), camera->GetHeight())) {
-			for (auto obj : node->getRegion()->getObjs()) {
-				Enemy* enemy = (Enemy*)obj;
-				this->enemies.push_back(enemy);
-			}
-
-			node->getRegion()->clearObjects();
-
-			this->physics->SetEnemies(this->enemies);
-			//this->quadtree.remove(node);
-		}
-	}
-
-	std::list<Enemy*>::iterator enemy;
-
-	for (enemy = this->enemies.begin(); enemy != this->enemies.end(); enemy++) {
-
-		if ((*enemy)->GetBody()->GetY() > 300) {
-			this->enemies.remove(*enemy);
-		}
-		else {
-			(*enemy)->Update(_dt);
-		}
-
+	for (auto boss : this->bosses) {
+		boss->Update(_dt);
 	}
 }
 

@@ -69,22 +69,31 @@ namespace Map
 
         public void save(String name)
         {
-            List<Tile> tiles = worldmap.Children;
-            int count = worldmap.Children.Count;
-            Bitmap bg = new Bitmap(count * 16, 16);
-
-            using (Graphics g = Graphics.FromImage(bg))
+            try
             {
-                for (int c = 0; c < count; c++)
+                List<Tile> tiles = worldmap.Children;
+                int count = worldmap.Children.Count;
+                Bitmap bg = new Bitmap(count * 16, 16);
+
+                using (Graphics g = Graphics.FromImage(bg))
                 {
-                    Bitmap tmp = Utils.convertMatrixColorPixelToBitmap(tiles[c].Matrix, 16, 16);
-                    g.DrawImage(tmp, new Point(c * 16, 0));
+                    for (int c = 0; c < count; c++)
+                    {
+                        Bitmap tmp = Utils.convertMatrixColorPixelToBitmap(tiles[c].Matrix, 16, 16);
+                        g.DrawImage(tmp, new Point(c * 16, 0));
+                    }
                 }
+
+                UtilsFile.exportFile(name + ".txt", worldmap.Matrix_save, this.col_map, this.row_map);
+
+                bg.Save(name + ".png");
+                bg.Dispose();
             }
+            catch (Exception ex)
+            {
 
-            UtilsFile.exportFile(name+".txt", worldmap.Matrix_save, this.col_map, this.row_map);
-
-            bg.Save(name+".png");
+            }
+            
         }
     }
 }

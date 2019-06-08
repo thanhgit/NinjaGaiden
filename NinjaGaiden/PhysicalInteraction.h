@@ -15,15 +15,19 @@ public:
 	void update();
 	void SetEnemies(std::list<Enemy*> _enemies);
 	void SetRecs(std::list<Box*> _recs) {
-		this->ninjaWithMap->SetRecs(_recs);
+		this->objWithMap->SetRecs(_recs);
+	}
+	void SetBosses(std::list<Boss*> _bosses) {
+		this->objWithMap->SetBosses(_bosses);
 	}
 private:
-	ObjectWithMap* ninjaWithMap;
+	ObjectWithMap* objWithMap;
 	NinjaWithEnemy* ninjaWithEnemy;
 
 
 	Ninja* ninja;
 	std::list<Enemy*> enemies;
+	std::list<Boss*> bosses;
 };
 
 

@@ -1,8 +1,8 @@
 #ifndef BOSS3_STATE_H
 #define BOSS3_STATE_H
-
+#include"BossState.h"
 #include"Box.h"
-class Boss3State
+class Boss3State: public BossState
 {
 public:
 	Boss3State();

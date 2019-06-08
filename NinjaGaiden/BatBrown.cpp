@@ -52,3 +52,20 @@ void BatBrown::Dead()
 	this->GetBody()->SetX(-100);
 	this->GetBody()->SetY(-100);
 }
+
+EnemyState * BatBrown::getState()
+{
+	return this->control->getState();
+}
+
+void BatBrown::setState(EnemyState * _state)
+{
+	if (typeid(*_state) == typeid(BatBrownRunLeft)) {
+		this->control->changeState(new BatBrownRunLeft(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(-Utils::SPEED_X);
+	}
+	else if (typeid(*_state) == typeid(BatBrownRunRight)) {
+		this->control->changeState(new BatBrownRunRight(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(Utils::SPEED_X);
+	}
+}

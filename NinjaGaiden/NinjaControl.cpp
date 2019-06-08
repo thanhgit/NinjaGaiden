@@ -70,7 +70,6 @@ void NinjaControl::changeState(NinjaState * _state, Box* _ninja)
 
 		if (this->indexActack > 3) {
 			this->indexActack = 0;
-			Sleep(200);
 			if (SameType(new NinjaAttackLeft())) {
 				this->state = new NinjaStandLeft(this->graphics);
 			}
@@ -86,7 +85,6 @@ void NinjaControl::changeState(NinjaState * _state, Box* _ninja)
 	else if (SameType(new JumpVerticalLeft()) || SameType(new JumpVerticalRight())) {
 		if (this->indexJumpVertical > 6) {
 			this->indexJumpVertical = 0;
-			Sleep(200);
 			if (SameType(new JumpVerticalLeft())) {
 				this->state = new JumpNormalLeft(this->graphics);
 			}
@@ -102,7 +100,6 @@ void NinjaControl::changeState(NinjaState * _state, Box* _ninja)
 	else if (SameType(new JumpParabolLeft()) || SameType(new JumpParabolRight())) {
 		if (this->indexJumpParabol > 5) {
 			this->indexJumpParabol = 0;
-			Sleep(200);
 			if (SameType(new JumpParabolLeft())) {
 				this->state = new JumpNormalLeft(this->graphics);
 			}

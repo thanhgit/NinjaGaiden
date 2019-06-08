@@ -125,9 +125,9 @@ float Box::SweptAABB(Box block, float &normalX, float &normalY) {
 
 	if (entryTime > exitTime ||
 		(entryX<0.0f && entryY<0.0f) ||
-		entryX>1.0f || entryY>1.0f) {
-		normalX = 0.0f;
-		normalY = 0.0f;
+		(entryX>1.0f || entryY>1.0f)) {
+		//normalX = 0.0f;
+		//normalY = 0.0f;
 		return 1.0f;
 	}
 	else {

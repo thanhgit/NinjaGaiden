@@ -59,3 +59,26 @@ void SwordMan::Dead()
 	this->GetBody()->SetX(-100);
 	this->GetBody()->SetY(-100);
 }
+
+EnemyState * SwordMan::getState()
+{
+	return this->control->getState();
+}
+
+void SwordMan::setState(EnemyState * _state)
+{
+	if (typeid(*_state) == typeid(SwordManRunLeft)) {
+		this->control->changeState(new SwordManRunLeft(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(-Utils::SPEED_X);
+	}
+	else if (typeid(*_state) == typeid(SwordManRunRight)) {
+		this->control->changeState(new SwordManRunRight(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(Utils::SPEED_X);
+	}
+	else if (typeid(*_state) == typeid(SwordManAttackLeft)) {
+		this->control->changeState(new SwordManAttackLeft(this->graphics), this->GetBody());
+	}
+	else if (typeid(*_state) == typeid(SwordManAttackRight)) {
+		this->control->changeState(new SwordManAttackRight(this->graphics), this->GetBody());
+	}
+}

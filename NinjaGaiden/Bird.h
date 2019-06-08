@@ -2,11 +2,11 @@
 #define BIRD_H
 #include"Sprite.h"
 #include"Keyboard.h"
-#include"Enemy.h"
+#include"Static.h"
 #include"BirdControl.h"
 #include"BirdGraphics.h"
 
-class Bird : public Enemy
+class Bird : public Static
 {
 public:
 	Bird(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, int _nWidth, int _nHeight, float _fVelocityX, float _fVelocityY);

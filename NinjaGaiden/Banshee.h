@@ -5,6 +5,7 @@
 #include"Enemy.h"
 #include"BansheeControl.h"
 #include"BansheeGraphics.h"
+#include<typeinfo.h>
 
 class Banshee : public Enemy
 {
@@ -14,6 +15,8 @@ public:
 	void Update(DWORD _dt);
 	void ai(Box* box);
 	void Dead();
+	EnemyState* getState();
+	void setState(EnemyState* _state);
 private:
 	BansheeControl * control;
 	BansheeGraphics* graphics;

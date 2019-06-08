@@ -2,6 +2,10 @@
 #include"Collision.h"
 #include"Enemy.h"
 
+#include"Boss.h"
+#include"Boss3StandLeft.h"
+#include"Boss3StandRight.h"
+
 ObjectWithMap::ObjectWithMap(Ninja* _ninja):Interaction()
 {
 	this->ninja = _ninja;
@@ -80,7 +84,40 @@ void ObjectWithMap::EnemiesInteractMap()
 				if (DependTypeEnemy(*obj)) {
 					Enemy* enemy = (Enemy*)*obj;
 					enemy->GetBody()->SetVelocityX(-enemy->GetBody()->GetVelocityX());
+				}
+			}
+		}
+	}
+}
 
+void ObjectWithMap::BossInteractMap()
+{
+	std::list<Boss*>::iterator obj;
+	for (obj = this->bosses.begin(); obj != this->bosses.end(); obj++) {
+		Collision* collition = new Collision((*obj)->GetBody());
+		std::list<Box*>::iterator rec;
+		for (rec = this->recs.begin(); rec != this->recs.end(); rec++) {
+			collition->collision(*rec);
+			if (collition->GetDirection() == DOWN) {
+				float time = collition->GetCollisonTime();
+				(*obj)->normal();
+				float y = (*rec)->GetY() + 40;
+				(*obj)->GetBody()->SetY(y);
+			}
+			else if (collition->GetDirection() == LEFT) {
+				float time = collition->GetCollisonTime();
+				(*obj)->normal();
+				if (DependTypeBoss(*obj)) {
+					Boss* boss = (Boss*)*obj;
+					boss->setState(new Boss3StandLeft());
+				}
+			}
+			else if (collition->GetDirection() == RIGHT) {
+				float time = collition->GetCollisonTime();
+				(*obj)->normal();
+				if (DependTypeBoss(*obj)) {
+					Boss* boss = (Boss*)*obj;
+					boss->setState(new Boss3StandRight());
 				}
 			}
 		}
@@ -91,4 +128,5 @@ void ObjectWithMap::interact()
 {
 	NinjaInteractMap();
 	EnemiesInteractMap();	
+	BossInteractMap();
 }

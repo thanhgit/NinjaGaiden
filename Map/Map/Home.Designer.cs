@@ -52,6 +52,7 @@
             this.btnImportBoss = new System.Windows.Forms.Button();
             this.imageListObject = new System.Windows.Forms.ImageList(this.components);
             this.groupBoxObj = new System.Windows.Forms.GroupBox();
+            this.btnUpdateObject = new System.Windows.Forms.Button();
             this.txtContainer = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtType = new System.Windows.Forms.TextBox();
@@ -68,7 +69,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnBuildQuadtree = new System.Windows.Forms.Button();
-            this.btnUpdateObject = new System.Windows.Forms.Button();
+            this.btnBuildGrid = new System.Windows.Forms.Button();
+            this.txtWidthCell = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtHeightCell = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblWidthMap = new System.Windows.Forms.Label();
+            this.lblHeightMap = new System.Windows.Forms.Label();
+            this.lblRow = new System.Windows.Forms.Label();
+            this.lblColumn = new System.Windows.Forms.Label();
             this.panelMap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMap)).BeginInit();
             this.panelControl.SuspendLayout();
@@ -259,6 +272,13 @@
             this.groupBoxObj.Name = "groupBoxObj";
             this.groupBoxObj.TabStop = false;
             // 
+            // btnUpdateObject
+            // 
+            resources.ApplyResources(this.btnUpdateObject, "btnUpdateObject");
+            this.btnUpdateObject.Name = "btnUpdateObject";
+            this.btnUpdateObject.UseVisualStyleBackColor = true;
+            this.btnUpdateObject.Click += new System.EventHandler(this.btnUpdateObject_Click);
+            // 
             // txtContainer
             // 
             resources.ApplyResources(this.txtContainer, "txtContainer");
@@ -341,17 +361,90 @@
             this.btnBuildQuadtree.UseVisualStyleBackColor = true;
             this.btnBuildQuadtree.Click += new System.EventHandler(this.btnBuildQuadtree_Click);
             // 
-            // btnUpdateObject
+            // btnBuildGrid
             // 
-            resources.ApplyResources(this.btnUpdateObject, "btnUpdateObject");
-            this.btnUpdateObject.Name = "btnUpdateObject";
-            this.btnUpdateObject.UseVisualStyleBackColor = true;
-            this.btnUpdateObject.Click += new System.EventHandler(this.btnUpdateObject_Click);
+            resources.ApplyResources(this.btnBuildGrid, "btnBuildGrid");
+            this.btnBuildGrid.Name = "btnBuildGrid";
+            this.btnBuildGrid.UseVisualStyleBackColor = true;
+            this.btnBuildGrid.Click += new System.EventHandler(this.btnBuildGrid_Click);
+            // 
+            // txtWidthCell
+            // 
+            resources.ApplyResources(this.txtWidthCell, "txtWidthCell");
+            this.txtWidthCell.Name = "txtWidthCell";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // txtHeightCell
+            // 
+            resources.ApplyResources(this.txtHeightCell, "txtHeightCell");
+            this.txtHeightCell.Name = "txtHeightCell";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
+            // 
+            // lblWidthMap
+            // 
+            resources.ApplyResources(this.lblWidthMap, "lblWidthMap");
+            this.lblWidthMap.Name = "lblWidthMap";
+            // 
+            // lblHeightMap
+            // 
+            resources.ApplyResources(this.lblHeightMap, "lblHeightMap");
+            this.lblHeightMap.Name = "lblHeightMap";
+            // 
+            // lblRow
+            // 
+            resources.ApplyResources(this.lblRow, "lblRow");
+            this.lblRow.Name = "lblRow";
+            // 
+            // lblColumn
+            // 
+            resources.ApplyResources(this.lblColumn, "lblColumn");
+            this.lblColumn.Name = "lblColumn";
             // 
             // Home
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblColumn);
+            this.Controls.Add(this.lblHeightMap);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblRow);
+            this.Controls.Add(this.lblWidthMap);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtHeightCell);
+            this.Controls.Add(this.txtWidthCell);
+            this.Controls.Add(this.btnBuildGrid);
             this.Controls.Add(this.btnBuildQuadtree);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBoxObj);
@@ -423,5 +516,18 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnBuildQuadtree;
         private System.Windows.Forms.Button btnUpdateObject;
+        private System.Windows.Forms.Button btnBuildGrid;
+        private System.Windows.Forms.TextBox txtWidthCell;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtHeightCell;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblWidthMap;
+        private System.Windows.Forms.Label lblHeightMap;
+        private System.Windows.Forms.Label lblRow;
+        private System.Windows.Forms.Label lblColumn;
     }
 }

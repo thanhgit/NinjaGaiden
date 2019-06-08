@@ -45,7 +45,7 @@ void Keyboard::InputKeyboard(HWND _hWnd) {
 	}
 
 	if (this->lpDIdv8->Acquire() != DI_OK) {
-		MessageBox(NULL, L"Error InitInput SetCooperativeLevel", L"Error", MB_OK);
+		//MessageBox(NULL, L"Error InitInput SetCooperativeLevel", L"Error", MB_OK);
 	}
 
 	DIPROPDWORD dipdw;

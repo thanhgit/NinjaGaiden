@@ -10,7 +10,7 @@ public:
 	~Boss3JumpLeft();
 	void update(Box* boss3);
 private:
-	Boss3Graphics * graphics;
+	Boss3Graphics* graphics;
 };
 
 

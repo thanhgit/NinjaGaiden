@@ -84,7 +84,7 @@ void Map2::ReadRecs(char * _filename)
 				raw.erase(0, raw.find_first_of(" ") + 1);
 			}
 
-			Box* box = new Box(x, Utils::WORLMAP_HEIGHT - y - height / 2 - 5, width, height, 0, 0);
+			Box* box = new Box(x, Utils::WORLMAP_HEIGHT - y - height / 2, width, height, 0, 0);
 			this->recs.push_back(box);
 			Rec* rec = new Rec(this->d3ddv, this->camera, x, Utils::WORLMAP_HEIGHT - y - height / 2 - 5, width, height, 0, 0);
 			this->recsObj.push_back(rec);

@@ -3,6 +3,7 @@
 #include"Enemy.h"
 #include"Item.h"
 #include"Static.h"
+#include"Boss.h"
 
 Interaction::Interaction()
 {
@@ -36,6 +37,16 @@ bool Interaction::DependTypeStatic(Object * _obj)
 {
 	Static* statics = (Static*)_obj;
 	if (statics != 0) {
+		return true;
+	}
+
+	return false;
+}
+
+bool Interaction::DependTypeBoss(Object * _obj)
+{
+	Boss* boss = (Boss*)_obj;
+	if (boss != 0) {
 		return true;
 	}
 

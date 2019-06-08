@@ -122,6 +122,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Box.cpp" />
+    <ClCompile Include="Collision.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="QNode.cpp" />
@@ -129,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Box.h" />
+    <ClInclude Include="Collision.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="QNode.h" />
     <ClInclude Include="QRegion.h" />

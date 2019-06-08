@@ -66,6 +66,8 @@
     <Compile Include="MapEditor\FileSys\Object\LadderObj.cs" />
     <Compile Include="MapEditor\FileSys\Object\ObjDefault.cs" />
     <Compile Include="MapEditor\FileSys\Object\RecObject.cs" />
+    <Compile Include="MapEditor\Grid\Cell.cs" />
+    <Compile Include="MapEditor\Grid\Grid.cs" />
     <Compile Include="MapEditor\HomeControl\CreateMap.cs" />
     <Compile Include="MapEditor\HomeControl\IHomeCommand.cs" />
     <Compile Include="MapEditor\HomeControl\InvokeMap.cs" />

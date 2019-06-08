@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Map.MapEditor.Quadtree;
+using Map.MapEditor.Grid;
 
 namespace Map
 {
@@ -153,6 +154,18 @@ namespace Map
             foreach (QRegion qRegion in qRegions)
             {
                 results.Add(convertQRegionToRectangle(qRegion));
+            }
+
+            return results;
+        }
+
+        public static List<Rectangle> convertListCellToRectangle(List<Cell> cells)
+        {
+            List<Rectangle> results = new List<Rectangle>();
+
+            foreach(var cell in cells)
+            {
+                results.Add(new Rectangle(cell.X, cell.Y, cell.Width, cell.Height));
             }
 
             return results;

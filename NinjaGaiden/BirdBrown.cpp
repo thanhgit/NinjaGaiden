@@ -52,3 +52,20 @@ void BirdBrown::Dead()
 	this->GetBody()->SetX(-100);
 	this->GetBody()->SetY(-100);
 }
+
+EnemyState * BirdBrown::getState()
+{
+	return this->control->getState();
+}
+
+void BirdBrown::setState(EnemyState * _state)
+{
+	if (typeid(*_state) == typeid(BirdBrownRunLeft)) {
+		this->control->changeState(new BirdBrownRunLeft(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(-Utils::SPEED_X);
+	}
+	else if (typeid(*_state) == typeid(BirdBrownRunRight)) {
+		this->control->changeState(new BirdBrownRunRight(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(Utils::SPEED_X);
+	}
+}

@@ -1,8 +1,8 @@
 #ifndef BAT_BROWN_STATE_H
 #define BAT_BROWN_STATE_H
-
+#include"EnemyState.h"
 #include"Box.h"
-class BatBrownState
+class BatBrownState: public EnemyState
 {
 public:
 	BatBrownState();

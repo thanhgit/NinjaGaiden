@@ -22,12 +22,12 @@ public:
 	void processInput();
 	void exit();
 private:
-	int stage;
 	PhysicalInteraction* physics;
 	list<Box*> recs;
 
 	Ninja * ninja;
 	std::list<Enemy*> enemies;
+	std::list<Boss*> bosses;
 
 	Map* map;
 	Log* log;

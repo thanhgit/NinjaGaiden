@@ -5,7 +5,7 @@
 #include"Enemy.h"
 #include"DogControl.h"
 #include"DogGraphics.h"
-
+#include<typeinfo.h>
 class Dog : public Enemy
 {
 public:
@@ -14,6 +14,9 @@ public:
 	void Update(DWORD _dt);
 	void ai(Box* box);
 	void Dead();
+
+	EnemyState* getState();
+	void setState(EnemyState* _state);
 private:
 	DogControl * control;
 	DogGraphics* graphics;

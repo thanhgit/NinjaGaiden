@@ -49,7 +49,7 @@ void Ninja::Update(DWORD _dt)
 	this->hurt->GetBody()->SetX(this->body->GetX());
 	this->hurt->GetBody()->SetY(this->body->GetY());
 	// GRAVITY = 0.3F
-	//UpdateWeapon(_dt);
+	UpdateWeapon(_dt);
 	this->GetBody()->SetVelocityY(-0.3f *_dt);
 	float y = this->GetBody()->GetY() + this->GetBody()->GetVelocityY();
 	this->GetBody()->SetY(y);
@@ -76,7 +76,7 @@ void Ninja::Update(DWORD _dt)
 			ActionRunRight(_dt);
 		}
 	}
-	else if (this->keyboard->KeyDown(DIK_1)) {
+	else if (this->keyboard->KeyDown(DIK_0)) {
 		this->body->SetY(200);
 	}
 	else if (this->keyboard->KeyDown(DIK_K) && !IsActack()) {
@@ -191,7 +191,7 @@ void Ninja::restore()
 
 void Ninja::Dead()
 {
-	this->GetBody()->SetY(this->GetBody()->GetY() + 100);
+	//this->GetBody()->SetY(this->GetBody()->GetY() + 100);
 }
 
 void Ninja::ActionRunLeft(DWORD _dt)

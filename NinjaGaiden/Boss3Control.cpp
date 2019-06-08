@@ -28,7 +28,6 @@ Boss3Control::~Boss3Control()
 
 void Boss3Control::changeState(Boss3State * _state, Box* _boss3)
 {
-
 	this->boss3 = _boss3;
 	this->state = _state;
 	if (SameType(new Boss3StandLeft()) || SameType(new Boss3StandRight())) {
@@ -39,21 +38,23 @@ void Boss3Control::changeState(Boss3State * _state, Box* _boss3)
 			this->state = new Boss3StandRight(this->graphics);
 		}
 
-		Sleep(Utils::ANIMATE_TIME + 50);
-
+		Sleep(Utils::ANIMATE_TIME );
 	}
 	else if (SameType(new Boss3JumpLeft()) || SameType(new Boss3JumpRight())) {
 		if (this->indexJump > 6) {
+			this->indexJump = 0;
+
 			if (SameType(new Boss3JumpLeft())) {
-				this->state = new Boss3StandLeft();
+				this->state = new Boss3StandLeft(this->graphics);
 			}
 			else {
-				this->state = new Boss3StandRight();
+				this->state = new Boss3StandRight(this->graphics);
 			}
+
 		}
 		else {
 			this->indexJump++;
-			Sleep(Utils::ANIMATE_TIME);
+			Sleep(Utils::ANIMATE_TIME+ 120);
 		}
 		
 	}

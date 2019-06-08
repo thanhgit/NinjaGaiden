@@ -55,20 +55,11 @@
     <Filter Include="Engine\Log">
       <UniqueIdentifier>{69d99f12-778d-4521-b754-7d53bb56c17e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Object\Static">
-      <UniqueIdentifier>{61b57353-839a-40ea-b041-76afe4bcdba0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Scene\splash">
       <UniqueIdentifier>{70269f17-999e-4d19-aa60-60c5a2770930}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Text">
       <UniqueIdentifier>{9a646404-b4a9-488a-be83-8d89839b5b3f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Static\Items">
-      <UniqueIdentifier>{59604661-455a-47bb-a47a-7093962ac8d6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Static\Rec">
-      <UniqueIdentifier>{18a23ed7-ddfe-4894-a84c-612ac744bca3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Object\Weapon">
       <UniqueIdentifier>{053831a4-0ade-4ce0-81c3-49586cb86c2f}</UniqueIdentifier>
@@ -241,30 +232,6 @@
     <Filter Include="Object\Enemy\MachineGunGuySit\state\Sit">
       <UniqueIdentifier>{b8e59d75-29ec-447e-92fe-e235dc324025}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Object\Static\Bird">
-      <UniqueIdentifier>{4eeca784-505c-424d-b502-9d8b080e9869}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Static\Bird\graphics">
-      <UniqueIdentifier>{795c316e-e793-4ced-adfc-006e3767050f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Static\Bird\state">
-      <UniqueIdentifier>{108b22e5-2e61-45a2-b997-79bf4e48eacf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Static\Bird\state\Fly">
-      <UniqueIdentifier>{9ab152f6-238a-4b44-a15b-1282e761683d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Static\ItemContainer4">
-      <UniqueIdentifier>{d70eada3-b0af-401c-b0a7-c337e62231f9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Static\ItemContainer4\graphics">
-      <UniqueIdentifier>{f38361d9-2f71-42df-8848-53d3d2bdef06}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Static\ItemContainer4\state">
-      <UniqueIdentifier>{eeadcefd-95ef-43be-a150-ef10bb3e8e44}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Static\ItemContainer4\state\Run">
-      <UniqueIdentifier>{4a5ed55a-78d6-4a11-b06c-c6d224fdca66}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Quadtree">
       <UniqueIdentifier>{b4d791e8-f3f7-4a3e-a495-a9513a12d52e}</UniqueIdentifier>
     </Filter>
@@ -303,6 +270,39 @@
     </Filter>
     <Filter Include="Object\Boss\Boss3\state\Jump">
       <UniqueIdentifier>{988989ea-1317-4499-af3a-dce2498b8869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static">
+      <UniqueIdentifier>{61b57353-839a-40ea-b041-76afe4bcdba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Rec">
+      <UniqueIdentifier>{18a23ed7-ddfe-4894-a84c-612ac744bca3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Bird">
+      <UniqueIdentifier>{4eeca784-505c-424d-b502-9d8b080e9869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Bird\graphics">
+      <UniqueIdentifier>{795c316e-e793-4ced-adfc-006e3767050f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Bird\state">
+      <UniqueIdentifier>{108b22e5-2e61-45a2-b997-79bf4e48eacf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\Bird\state\Fly">
+      <UniqueIdentifier>{9ab152f6-238a-4b44-a15b-1282e761683d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\ItemContainer4">
+      <UniqueIdentifier>{d70eada3-b0af-401c-b0a7-c337e62231f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\ItemContainer4\graphics">
+      <UniqueIdentifier>{f38361d9-2f71-42df-8848-53d3d2bdef06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\ItemContainer4\state">
+      <UniqueIdentifier>{eeadcefd-95ef-43be-a150-ef10bb3e8e44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Static\ItemContainer4\state\Run">
+      <UniqueIdentifier>{4a5ed55a-78d6-4a11-b06c-c6d224fdca66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Item">
+      <UniqueIdentifier>{3d1d5670-3a9a-4725-8bc7-38ac02a8edb6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -386,9 +386,6 @@
     </ClCompile>
     <ClCompile Include="PhisicalInteraction.cpp">
       <Filter>Interaction</Filter>
-    </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>Object\Static\Items</Filter>
     </ClCompile>
     <ClCompile Include="Static.cpp">
       <Filter>Object\Static</Filter>
@@ -696,6 +693,18 @@
     <ClCompile Include="Boss3JumpRight.cpp">
       <Filter>Object\Boss\Boss3\state\Jump</Filter>
     </ClCompile>
+    <ClCompile Include="EnemyState.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss.cpp">
+      <Filter>Object\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="BossState.cpp">
+      <Filter>Object\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Object\Item</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -772,9 +781,6 @@
     </ClInclude>
     <ClInclude Include="PhysicalInteraction.h">
       <Filter>Interaction</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Object\Static\Items</Filter>
     </ClInclude>
     <ClInclude Include="Static.h">
       <Filter>Object\Static</Filter>
@@ -1081,6 +1087,18 @@
     </ClInclude>
     <ClInclude Include="Boss3JumpRight.h">
       <Filter>Object\Boss\Boss3\state\Jump</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyState.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss.h">
+      <Filter>Object\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="BossState.h">
+      <Filter>Object\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Object\Item</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

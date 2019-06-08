@@ -1,8 +1,8 @@
 #ifndef DOG_STATE_H
 #define DOG_STATE_H
-
+#include"EnemyState.h"
 #include"Box.h"
-class DogState
+class DogState: public EnemyState
 {
 public:
 	DogState();

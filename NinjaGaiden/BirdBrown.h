@@ -5,7 +5,7 @@
 #include"Enemy.h"
 #include"BirdBrownControl.h"
 #include"BirdBrownGraphics.h"
-
+#include<typeinfo.h>
 class BirdBrown : public Enemy
 {
 public:
@@ -14,6 +14,8 @@ public:
 	void Update(DWORD _dt);
 	void ai(Box* box);
 	void Dead();
+	EnemyState* getState();
+	void setState(EnemyState* _state);
 private:
 	BirdBrownControl * control;
 	BirdBrownGraphics* graphics;

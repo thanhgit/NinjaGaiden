@@ -52,7 +52,7 @@ void GameScene::UpdateScene(DWORD delta)
 
 	clock_t end = clock();
 	int elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
-	this->m_time = 180 - elapsed_secs;
+	this->m_time = 150 - elapsed_secs;
 	char bufferTime[33];
 	sprintf(bufferTime, "TIMER-%d", this->m_time);
 	this->txtTime->Draw(0, 342 +50, bufferTime);

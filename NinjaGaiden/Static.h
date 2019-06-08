@@ -12,11 +12,11 @@ public:
 	~Static();
 	void Update();
 	void Dead();
-	virtual Item* getItem();
+	
 	void SetKeyboard(Keyboard* keyboard);
 
 	void setDelta(DWORD _delta);
-	virtual string GetType()=0;
+
 	void SetActive(bool _active) {
 		this->active = _active;
 	}
@@ -24,12 +24,16 @@ public:
 		return this->active;
 	}
 
+	Item* getItem() {
+		return this->item;
+	}
 protected:
 	bool active;
 	Keyboard* keyboard;
 	Camera* camera;
 	DWORD delta;
 	Sprite* body;
+	Item* item;
 };
 
 #endif // !Static_H

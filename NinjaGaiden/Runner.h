@@ -5,7 +5,7 @@
 #include"Enemy.h"
 #include"RunnerControl.h"
 #include"RunnerGraphics.h"
-
+#include<typeinfo.h>
 class Runner : public Enemy
 {
 public:
@@ -14,6 +14,9 @@ public:
 	void Update(DWORD _dt);
 	void ai(Box* box);
 	void Dead();
+
+	EnemyState* getState();
+	void setState(EnemyState* _state);
 private:
 	RunnerControl * control;
 	RunnerGraphics* graphics;

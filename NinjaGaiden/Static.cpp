@@ -19,12 +19,6 @@ void Static::Dead()
 {
 }
 
-Item * Static::getItem()
-{
-	return nullptr;
-}
-
-
 void Static::SetKeyboard(Keyboard * _keyboard)
 {
 	this->keyboard = _keyboard;

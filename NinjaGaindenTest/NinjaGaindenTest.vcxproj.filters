@@ -14,6 +14,9 @@
     <ClCompile Include="QRegion.cpp">
       <Filter>Dependences</Filter>
     </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Dependences</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Dependences">
@@ -34,6 +37,9 @@
       <Filter>Dependences</Filter>
     </ClInclude>
     <ClInclude Include="Utils.h">
+      <Filter>Dependences</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
       <Filter>Dependences</Filter>
     </ClInclude>
   </ItemGroup>

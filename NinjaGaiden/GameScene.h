@@ -2,7 +2,6 @@
 #define GAME_SCENE_H
 #include"Scene.h"
 #include"Map.h"
-#include"Log.h""
 #include"Object.h"
 #include"Sprite.h"
 #include"Background.h"

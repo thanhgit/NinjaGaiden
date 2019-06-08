@@ -18,7 +18,7 @@ public:
 	const static int CELL_HEIGHT = 16;
 
 	const static int ANIMATE_TIME = 10;
-	const static int NINJA_ANIMATE_TIME = 80;
+	const static int NINJA_ANIMATE_TIME = 10;
 	const static float SPEED_X;
 	const static float SPEED_Y;
 

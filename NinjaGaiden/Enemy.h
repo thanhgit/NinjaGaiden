@@ -3,6 +3,7 @@
 #include"Sprite.h"
 #include"Object.h"
 #include"Keyboard.h"
+#include"EnemyState.h"
 
 class Enemy : public Object
 {
@@ -28,7 +29,9 @@ public:
 	int GetPoint() {
 		return this->m_point;
 	}
-	
+
+	virtual EnemyState* getState() = 0;
+	virtual void setState(EnemyState* _enemy) = 0;
 protected:
 	bool active;
 	Keyboard* keyboard;

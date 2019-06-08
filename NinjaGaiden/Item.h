@@ -23,6 +23,7 @@ public:
 	bool GetActive() {
 		return this->active;
 	}
+
 	virtual string GetType()=0;
 protected:
 	bool active;

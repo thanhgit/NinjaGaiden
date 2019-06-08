@@ -57,3 +57,20 @@ void Runner::Dead()
 	this->GetBody()->SetX(-100);
 	this->GetBody()->SetY(-100);
 }
+
+EnemyState * Runner::getState()
+{
+	return this->control->getState();
+}
+
+void Runner::setState(EnemyState * _state)
+{
+	if (typeid(*_state) == typeid(RunnerRunLeft)) {
+		this->control->changeState(new RunnerRunLeft(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(-Utils::SPEED_X);
+	}
+	else if (typeid(*_state) == typeid(RunnerRunRight)) {
+		this->control->changeState(new RunnerRunRight(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(Utils::SPEED_X);
+	}
+}

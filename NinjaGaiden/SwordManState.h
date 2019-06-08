@@ -1,8 +1,8 @@
 #ifndef SWORD_MAN_STATE_H
 #define SWORD_MAN_STATE_H
-
+#include"EnemyState.h"
 #include"Box.h"
-class SwordManState
+class SwordManState: public EnemyState
 {
 public:
 	SwordManState();

@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Map.MapEditor.Quadtree;
+using Map.MapEditor.Grid;
 
 namespace Map
 {
@@ -67,6 +68,7 @@ namespace Map
 
         private List<Rectangle> rectanglesOfQuadtree = new List<Rectangle>();
         private List<QNode> nodes = new List<QNode>();
+        private List<Cell> cells = new List<Cell>();
 
         public Bitmap Bmp_map
         {
@@ -358,12 +360,25 @@ namespace Map
                     writer.Close();
                 }
 
-                using (StreamWriter writer = new StreamWriter(name + "quadtree.txt"))
-                {
+                //using (StreamWriter writer = new StreamWriter(name + "quadtree.txt"))
+                //{
 
-                    foreach (QNode node in this.nodes)
+                //    foreach (QNode node in this.nodes)
+                //    {
+                //        foreach(String str in node.toString())
+                //        {
+                //            writer.WriteLine(str);
+                //        }
+                //    }
+
+                //    writer.Close();
+                //}
+
+                using (StreamWriter writer = new StreamWriter(name+"grid.txt"))
+                {
+                    foreach(var obj in this.cells)
                     {
-                        foreach(String str in node.toString())
+                        foreach(var str in obj.toStringToList())
                         {
                             writer.WriteLine(str);
                         }
@@ -605,6 +620,42 @@ namespace Map
             this.pbObjSelected.Location = new Point(_x, _y);
 
             updateGraphic();
+        }
+
+        private void btnBuildGrid_Click(object sender, EventArgs e)
+        {
+            // validate input 
+            try
+            {
+                int widthMap = this.width_map;
+                int heightMap = this.height_map;
+                int widthCell = int.Parse(txtWidthCell.Text);
+                int heightCell = int.Parse(txtHeightCell.Text);
+
+                
+
+                List<ObjGame> _objGames = new List<ObjGame>();
+                _objGames.AddRange(this.enemies);
+                _objGames.AddRange(this.bosses);
+                _objGames.AddRange(this.itemList);
+
+                Grid grid = new Grid(widthMap, heightMap, widthCell, heightCell, _objGames);
+
+                this.rectanglesOfQuadtree = Utils.convertListCellToRectangle(grid.Cells);
+                this.cells = grid.Cells;
+                updateGraphic();
+
+                // set UI
+                lblWidthMap.Text = widthMap.ToString();
+                lblHeightMap.Text = heightMap.ToString();
+                lblRow.Text = grid.Row.ToString();
+                lblColumn.Text = grid.Col.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Division is not available");
+            }
+            
         }
     }
 }

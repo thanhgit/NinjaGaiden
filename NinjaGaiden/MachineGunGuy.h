@@ -5,7 +5,7 @@
 #include"Enemy.h"
 #include"MachineGunGuyControl.h"
 #include"MachineGunGuyGraphics.h"
-
+#include<typeinfo.h>
 class MachineGunGuy : public Enemy
 {
 public:
@@ -14,6 +14,9 @@ public:
 	void Update(DWORD _dt);
 	void ai(Box* box);
 	void Dead();
+
+	EnemyState* getState();
+	void setState(EnemyState* _state);
 private:
 	MachineGunGuyControl * control;
 	MachineGunGuyGraphics* graphics;

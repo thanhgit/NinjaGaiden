@@ -1,6 +1,6 @@
 #include"Boss3JumpLeft.h"
 
-Boss3JumpLeft::Boss3JumpLeft(Boss3Graphics * _graphics)
+Boss3JumpLeft::Boss3JumpLeft(Boss3Graphics* _graphics)
 {
 	this->graphics = _graphics;
 }

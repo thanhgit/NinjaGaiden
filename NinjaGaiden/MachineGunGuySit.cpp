@@ -57,3 +57,20 @@ void MachineGunGuySit::Dead()
 	this->GetBody()->SetX(-100);
 	this->GetBody()->SetY(-100);
 }
+
+EnemyState * MachineGunGuySit::getState()
+{
+	return this->control->getState();
+}
+
+void MachineGunGuySit::setState(EnemyState * _state)
+{
+	if (typeid(*_state) == typeid(MachineGunGuySitSitLeft)) {
+		this->control->changeState(new MachineGunGuySitSitLeft(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(-Utils::SPEED_X);
+	}
+	else if (typeid(*_state) == typeid(MachineGunGuySitSitRight)) {
+		this->control->changeState(new MachineGunGuySitSitRight(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(Utils::SPEED_X);
+	}
+}

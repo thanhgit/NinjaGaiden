@@ -56,3 +56,23 @@ void Banshee::Dead()
 	this->GetBody()->SetX(-100);
 	this->GetBody()->SetY(-100);
 }
+
+EnemyState * Banshee::getState()
+{
+	return this->control->getState();
+}
+
+void Banshee::setState(EnemyState * _state)
+{
+	if (typeid(*_state) == typeid(BansheeRunLeft)) {
+		this->control->changeState(new BansheeRunLeft(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(-Utils::SPEED_X);
+	}
+	else if (typeid(*_state) == typeid(BansheeRunRight)) {
+		this->control->changeState(new BansheeRunRight(this->graphics), this->GetBody());
+		this->GetBody()->SetVelocityX(Utils::SPEED_X);
+	}
+}
+
+
+

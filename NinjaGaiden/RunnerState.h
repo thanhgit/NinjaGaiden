@@ -1,8 +1,8 @@
 #ifndef RUNNER_STATE_H
 #define RUNNER_STATE_H
-
+#include"EnemyState.h"
 #include"Box.h"
-class RunnerState
+class RunnerState: public EnemyState
 {
 public:
 	RunnerState();

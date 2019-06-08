@@ -2,11 +2,11 @@
 #define ITEM_CONTAINER_H
 #include"Sprite.h"
 #include"Keyboard.h"
-#include"Enemy.h"
+#include"Static.h"
 #include"ItemContainer4Control.h"
 #include"ItemContainer4Graphics.h"
 
-class ItemContainer4 : public Enemy
+class ItemContainer4 : public Static
 {
 public:
 	ItemContainer4(LPDIRECT3DDEVICE9 _lpD3ddv, Camera * camera, float _fX, float _fY, int _nWidth, int _nHeight, float _fVelocityX, float _fVelocityY);

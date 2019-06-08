@@ -22,7 +22,6 @@ public:
 	void processInput();
 	void exit();
 private:
-	int stage;
 	PhysicalInteraction* physics;
 	list<Box*> recs;
 

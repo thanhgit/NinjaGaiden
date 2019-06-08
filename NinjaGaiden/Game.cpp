@@ -54,7 +54,7 @@ void Game::ProcessInput() {
 }
 
 void Game::InitSprite() {
-	Scene* scene1 = new Scene3(GetDevice(), GetCamera(), this->GetHwnd());
+	Scene* scene1 = new Scene1(GetDevice(), GetCamera(), this->GetHwnd());
 	scene1->SetKeyboard(this->keyboard);
 	scene1->InitScene();
 	SceneManager::Instance()->add(scene1);

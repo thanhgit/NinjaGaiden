@@ -2,7 +2,6 @@
 #define SPLASH_SCENE_H
 #include"Scene.h"
 #include"Map.h"
-#include"Log.h""
 #include"Object.h"
 #include"Ninja.h"
 #include<list>

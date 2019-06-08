@@ -10,6 +10,7 @@ public:
 	bool DependTypeEnemy(Object* _obj);
 	bool DependTypeItem(Object* _obj);
 	bool DependTypeStatic(Object* _obj);
+	bool DependTypeBoss(Object* _obj);
 private:
 
 };

@@ -26,11 +26,12 @@ void Hurt::AttackRight()
 void Hurt::Update(DWORD _dt)
 {
 	float x = 0;
+	int vx = 1;
 	switch (this->action)
 	{
 		case 1:
-			this->GetBody()->SetVelocityX(-0.2);
-			x = this->GetBody()->GetX() + -5;
+			//this->GetBody()->SetVelocityX(-0.2);
+			x = this->GetBody()->GetX() - vx;
 			this->GetBody()->SetX(x);
 			index++;
 
@@ -40,8 +41,8 @@ void Hurt::Update(DWORD _dt)
 
 			break;
 		case 2:
-			this->GetBody()->SetVelocityX(0.2);
-			x = this->GetBody()->GetX() + 5;
+			//this->GetBody()->SetVelocityX(0.2);
+			x = this->GetBody()->GetX() + vx;
 			this->GetBody()->SetX(x);
 			index++;
 
@@ -54,7 +55,7 @@ void Hurt::Update(DWORD _dt)
 			break;
 	}
 
-	this->body->Draw(x, this->GetBody()->GetY());
+	this->body->Draw(this->GetBody()->GetX(), this->GetBody()->GetY());
 	this->body->Next();
 	
 }
