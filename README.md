@@ -1,3 +1,10 @@
 # NinjaGaiden
 
-<embed src="https://raw.githubusercontent.com/thanhgit/NinjaGaiden/45d979ebef695089392e44af65695b0dabb2d28b/%C4%90%E1%BB%92%20%C3%81N%20NINJA%20GAIDEN.pptx.pdf" width="800" height="500" type="application/pdf">
+![Slide1](./document/slide1.png)
+![Slide2](./document/slide2.png)
+![Slide3](./document/slide3.png)
+![Slide4](./document/slide4.png)
+![Slide5](./document/slide5.png)
+![Slide6](./document/slide6.png)
+![Slide7](./document/slide7.png)
+![Slide8](./document/slide8.png)
