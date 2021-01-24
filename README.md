@@ -4,6 +4,8 @@ This is presentation of a game project. Specifically, it is Ninja Gaiden
 How to design a basic game with OOP
 The basic components in game
 ```
+## Demo
+![](./background.PNG)
 ## Slide
 ![Slide1](./document/slide1.png)
 ![Slide2](./document/slide2.png)
